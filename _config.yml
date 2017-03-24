@@ -15,6 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: nkprince007
 email: nkprince007@gmail.com
+secondary_email: nkprince007@icloud.com
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
@@ -23,6 +24,9 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://nkprince007.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: nkprince007
 github_username:  nkprince007
+gitlab_username: nkprince007
+instagram_username: naveenkumarsangi
+facebook_username: naveen.007.prince
 
 # Build settings
 markdown: kramdown
@@ -31,3 +35,6 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+port: 8000
+sass:
+  style: compressed
