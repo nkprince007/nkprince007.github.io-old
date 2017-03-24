@@ -124,6 +124,72 @@ footer {
   }
 }
 
+#about {
+  position: relative;
+
+  .title {
+    font-family: Roboto Slab, sans-serif;
+    text-transform: uppercase;
+  }
+
+  .line-component {
+    position: relative;
+
+    &:nth-child(even) .card {
+      margin-left: calc(50% + 50px);
+    }
+
+    &:nth-child(odd) .card {
+      margin-left: 0;
+    }
+
+    &:before, &:after {
+      display: block;
+      content: "";
+      width: 2px;
+      height: calc(50% - 30px);
+      position: absolute;
+      background: #d2d2d2;
+      left: calc(50% - 1px);
+      top: 0;
+    }
+
+    &:after {
+      height: calc(50% - 15px);
+      position: absolute;
+      top: calc(50% + 30px);
+    }
+
+    &:first-of-type::before,
+    &:last-child::after {
+        display: none !important;
+    }
+
+    .card {
+      position: relative;
+      width: calc(50% - 50px);
+    }
+
+    .badge {
+      display: block;
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background: #d2d2d2;
+      top: calc(50% - 20px);
+      right: calc(50% - 20px);
+      border-radius: 50%;
+      text-align: center;
+      cursor: default;
+
+      i {
+        font-size: 25px;
+        line-height: 40px;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 760px) {
   #home {
     .welcome {
