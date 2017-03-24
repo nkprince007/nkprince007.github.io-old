@@ -1,0 +1,151 @@
+---
+---
+
+@import url('http://fonts.googleapis.com/icon?family=Material+Icons|Raleway|Poppins|Roboto+Slab');
+
+html {
+  background-color: #fafafa;
+}
+
+footer {
+  .title {
+    font-weight: lighter !important;
+  }
+}
+.navbar {
+  box-shadow: none !important;
+
+  i {
+    color: black !important;
+  }
+
+  .indicator {
+    background-color: black !important;
+  }
+
+  .tabs {
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+
+    .tab {
+      a {
+        letter-spacing: 4px;
+        font-size: 14px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        color: grey !important;
+      }
+
+      a.active {
+        color: black !important;
+      }
+    }
+  }
+}
+#home {
+  .welcome {
+    clear: both;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .owner-picture {
+      flex: 1.25;
+      margin-right: -60px;
+      display: inline-block;
+      vertical-align: top;
+      z-index: -1;
+      text-align: right;
+
+      .glitch-container {
+        margin: 0px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    .owner-content {
+      flex: 2;
+      display: inline-block;
+
+      .owner-title {
+        text-align: left !important;
+        font-family: Roboto Slab, serif;
+        font-size: 4vw;
+      }
+
+      .owner-details {
+        margin-left: 40%;
+        margin-top: 10%;
+        text-align: right !important;
+
+        .owner-subtitle {
+          font-family: Poppins, Helvetica, Arial, sans-serif;
+          font-weight: 500;
+          font-style: normal;
+          font-size: 0.75rem;
+          text-transform: uppercase;
+          font-variant: small-caps;
+          letter-spacing: .45rem;
+          line-height: 2.0;
+          cursor: pointer;
+
+          &:after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            background: teal;
+            opacity: .2;
+          }
+        }
+
+        .owner-quote {
+          font-family: Baskerville, serif;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 7;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          font-weight: 400;
+          font-size: 1.5vw;
+          font-style: normal;
+          line-height: 1.7;
+          letter-spacing: 0.01rem;
+          max-height: 20%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  #home {
+    .welcome {
+      flex-direction: column;
+
+      .owner-picture {
+        margin-right: 0 !important;
+      }
+
+      .owner-content {
+        .owner-details {
+          margin-left: 0 !important;
+
+          .owner-subtitle:after {
+            margin: auto !important;
+          }
+
+          .owner-quote {
+            font-size: 1rem !important;
+          }
+        }
+      }
+    }
+  }
+}

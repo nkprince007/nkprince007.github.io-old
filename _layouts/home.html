@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ site.title }} | Home</title>
+
+    {% include base.html %}
+</head>
+<body>
+    {% include header.html %}
+
+    <div id="home" class="row">
+        <div class="welcome container">
+            <div class="owner-picture">
+                <figure class="glitch-container">
+                    <img src="assets/img/nkprince007.jpg" alt="Sangi<br />Naveen Kumar" />
+                </figure>
+            </div>
+            <div class="owner-content">
+                <h3 class="owner-title grey-text text-darken-4">
+                    Sangi<br />
+                    <span>Naveen Kumar</span>
+                </h3>
+                <div class="owner-details">
+                    <p data-juggle class="owner-subtitle">Web Developer, Designer & Software Enthusiast</p>
+                    <p class="owner-quote text-black text-lighten-2">
+                        “We all have ambitious goals for sure. But for me, it is not about size.
+                        It's about the quality — think Ferrari not Ford.”</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="test2" class="col s12">Test 2</div>
+    <div id="test3" class="col s12">Test 3</div>
+
+    {% include footer.html %}
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <script>
+        $(document).ready(() => {
+            $(".button-collapse").sideNav();
+
+            var elements = document.querySelectorAll('[data-chaffle]');
+            Array.prototype.forEach.call(elements, el => {
+                const chaffle = new Chaffle(el);
+                setInterval(() => chaffle.init(), 5000);
+            });
+
+            var elements = document.querySelectorAll('[data-juggle]');
+            Array.prototype.forEach.call(elements, el => {
+                const juggle = new Juggle(el);
+                $(el).mouseover(() => juggle.init());
+                $(el).mouseout(() => juggle.stop());
+            });
+        });
+    </script>
+</body>
+</html>
