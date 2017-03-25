@@ -66,24 +66,8 @@
     <div id="test3" class="col s12">Test 3</div>
 
     {% include footer.html %}
-    <link rel="stylesheet" href="assets/css/index.css" />
-    <script>
-        $(document).ready(() => {
-            $(".button-collapse").sideNav();
 
-            var elements = document.querySelectorAll('[data-chaffle]');
-            Array.prototype.forEach.call(elements, el => {
-                const chaffle = new Chaffle(el);
-                setInterval(() => chaffle.init(), 5000);
-            });
-
-            var elements = document.querySelectorAll('[data-juggle]');
-            Array.prototype.forEach.call(elements, el => {
-                const juggle = new Juggle(el);
-                $(el).mouseover(() => juggle.init());
-                $(el).mouseout(() => juggle.stop());
-            });
-        });
-    </script>
+    <link type="text/css" rel="stylesheet" href="assets/css/index.css" />
+    <script type="text/javascript" src="assets/js/index.js"></script>
 </body>
 </html>

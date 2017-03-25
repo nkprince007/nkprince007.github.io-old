@@ -4,6 +4,11 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons|Raleway|Poppins|Roboto+Slab');
 @import 'animate.scss';
 
+@font-face {
+  font-family: 'Kingthings Trypewriter';
+  src: local(Kingthings Trypewriter), url('../fonts/kingthings-trypewriter/Kingthings-Trypewriter-2.ttf') format('truetype');
+}
+
 html {
   background-color: #fafafa;
 }
@@ -109,17 +114,14 @@ footer {
         }
 
         .owner-quote {
-          font-family: Baskerville, serif;
+          font-family: 'Kingthings Trypewriter', serif;
           display: -webkit-box;
           -webkit-box-orient: vertical;
           -webkit-line-clamp: 7;
           text-overflow: ellipsis;
           overflow: hidden;
-          font-weight: 400;
-          font-size: 1.5vw;
+          font-size: 2vw;
           font-style: normal;
-          line-height: 1.7;
-          letter-spacing: 0.01rem;
           max-height: 20%;
         }
       }
@@ -224,6 +226,7 @@ footer {
           }
 
           .owner-quote {
+            font-family: Baskerville, serif;
             font-size: 1rem !important;
           }
         }
