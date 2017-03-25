@@ -1,0 +1,59 @@
+---
+---
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import 'animate.scss';
+
+html, body, #static {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#static {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+}
+
+.error {
+  color: white;
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+
+  .message {
+    display: block;
+    animation: pulsed 5s infinite;
+    font-weight: bold;
+    font-size: 12vw;
+  }
+
+  .text {
+    text-transform: uppercase;
+    font-size: 3vw;
+    margin: 0;
+  }
+
+  .base-link {
+    padding-top: 100px;
+    display: block;
+    text-transform: uppercase;
+  }
+
+  .base-link:hover i {
+    animation: arrow .4s infinite;
+  }
+}
+
+.page-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
