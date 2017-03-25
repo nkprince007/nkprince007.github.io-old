@@ -2,6 +2,7 @@
 ---
 
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons|Raleway|Poppins|Roboto+Slab');
+@import 'animate.scss';
 
 html {
   background-color: #fafafa;
@@ -56,6 +57,7 @@ footer {
       vertical-align: top;
       z-index: -1;
       text-align: right;
+      position: relative;
 
       .glitch-container {
         margin: 0px;
@@ -75,6 +77,7 @@ footer {
         text-align: left !important;
         font-family: Roboto Slab, serif;
         font-size: 4vw;
+        animation: pulsed 5s infinite !important;
       }
 
       .owner-details {
@@ -141,6 +144,7 @@ footer {
 
     &:nth-child(odd) .card {
       margin-left: 0;
+      text-align: right !important;
     }
 
     &:before, &:after {
@@ -166,8 +170,15 @@ footer {
     }
 
     .card {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 17px;
       position: relative;
       width: calc(50% - 50px);
+
+      .card-title {
+        font-weight: 500;
+        font-family: Poppins, Helvetica, Arial, sans-serif;
+      }
     }
 
     .badge {
@@ -181,6 +192,11 @@ footer {
       border-radius: 50%;
       text-align: center;
       cursor: default;
+      animation: all 0.3s ease;
+
+      &:hover {
+        transition: scale3d(1.2, 1.2, 1);
+      }
 
       i {
         font-size: 25px;
@@ -211,6 +227,23 @@ footer {
             font-size: 1rem !important;
           }
         }
+      }
+    }
+  }
+
+  #about {
+    .line-component {
+      &:before, &:after {
+        left: 19px !important;
+      }
+
+      .card {
+        margin-left: 70px !important;
+        width: calc(100% - 100px);
+      }
+
+      .badge {
+        left: 0 !important;
       }
     }
   }

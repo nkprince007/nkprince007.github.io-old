@@ -13,3 +13,7 @@ String.prototype.replaceAt = function (index, character) {
     charArray[index] = character;
     return charArray.toString();
 }
+
+function randomRange(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}

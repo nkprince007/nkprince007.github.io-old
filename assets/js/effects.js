@@ -22,7 +22,7 @@ class Juggle {
         var self = this;
         let textLength = this.text.length;
         for (var i = 0; i < textLength;) {
-            var randomChar = String.fromCharCode(33 + Math.round(Math.random() * 99));
+            var randomChar = String.fromCharCode(randomRange(33, 132));
             this.element.textContent = this.text.replaceAt(i-1, randomChar).toLowerCase();
             i += Math.round(Math.random() * textLength);
         }
@@ -118,19 +118,19 @@ class Chaffle {
         var str;
         switch (this.options.lang) {
             case "en":
-                str = String.fromCharCode(33 + Math.round(Math.random() * 99));
+                str = String.fromCharCode(randomRange(33, 132));
                 break;
             case "ja":
-                str = String.fromCharCode(19968 + Math.round(Math.random() * 80));
+                str = String.fromCharCode(randomRange(19968, 20048));
                 break;
             case "ja-hiragana":
-                str = String.fromCharCode(12352 + Math.round(Math.random() * 50));
+                str = String.fromCharCode(randomRange(12352, 12402));
                 break;
             case "ja-katakana":
-                str = String.fromCharCode(12448 + Math.round(Math.random() * 84));
+                str = String.fromCharCode(randomRange(12448, 12532));
                 break;
             case "ua":
-                str = String.fromCharCode(1040 + Math.round(Math.random() * 55));
+                str = String.fromCharCode(randomRange(1040, 1090));
                 break
         }
         return str
