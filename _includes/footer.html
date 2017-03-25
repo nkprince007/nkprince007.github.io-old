@@ -1,3 +1,15 @@
+<style>
+    .page-footer .footer-btn {
+        padding: 10px;
+    }
+    @media only screen and (max-width: 760px) {
+        .page-footer .footer-btn {
+            font-size: 12px;
+            padding: 5px;
+        }
+    }
+</style>
+
 <footer class="page-footer blue-grey darken-3">
     <div class="container">
     <div class="row">
@@ -10,22 +22,22 @@
             <li><a target="_top" href="mailto:{{site.secondary_email}}">{{site.secondary_email}}</a></li>
         </ul>
         </div>
-        <div class="col l7 offset-l1 s12">
-            <div class="row footer-btn-row">
-                <div class="col m6">
-                    <a target="_blank" href="https://twitter.com/{{site.twitter_username}}" class="waves-effect waves-light btn-large black">
+        <div class="col l8 s12">
+            <div class="col s12 footer-btn-row">
+                <div class="col m6 s12 footer-btn">
+                    <a target="_blank" href="https://twitter.com/{{site.twitter_username}}" class="col s12 waves-effect waves-light btn-large black">
                         <i class="fa fa-twitter" aria-hidden="true"></i> Follow me on twitter
                     </a>
                 </div>
-                <div class="col m6">
-                    <a target="_blank" href="https://github.com/{{site.twitter_username}}" class="waves-effect waves-light btn-large black">
+                <div class="col m6 s12 footer-btn">
+                    <a target="_blank" href="https://github.com/{{site.twitter_username}}" class="col s12 waves-effect waves-light btn-large black">
                         <i class="fa fa-github" aria-hidden="true"></i> Follow me on github
                     </a>
                 </div>
             </div>
-            <div class="row footer-btn-row">
-                <div class="col m6 offset-m3">
-                    <a target="_blank" href="https://fb.com/{{site.facebook_username}}" class="waves-effect waves-light btn-large black">
+            <div class="col s12 footer-btn-row">
+                <div class="col s12 offset-m3 footer-btn">
+                    <a target="_blank" href="https://fb.com/{{site.facebook_username}}" class="col s12 m6 waves-effect waves-light btn-large black">
                         <i class="fa fa-facebook" aria-hidden="true"></i> Follow me on Facebook
                     </a>
                 </div>

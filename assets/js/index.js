@@ -1,5 +1,19 @@
 $(document).ready(() => {
     $(".button-collapse").sideNav();
+    $("#mobile-navbar li").on('click', event => {
+        $("#mobile-navbar li a").each((i, el) => {
+            var linkedDiv = $(el).attr('href');
+            $(linkedDiv).removeClass('active');
+            $(linkedDiv).css('display', 'none');
+        });
+
+        var targetDiv = $(event.target).attr('href');
+        $(targetDiv).addClass('active');
+        $(targetDiv).removeAttr('style');
+
+        $(".button-collapse").sideNav('hide');
+        $("html, body").animate({ scrollTop: 0 });
+    });
 
     var elements = document.querySelectorAll('[data-chaffle]');
     Array.prototype.forEach.call(elements, el => {

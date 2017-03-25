@@ -146,7 +146,7 @@ footer {
 
     &:nth-child(odd) .card {
       margin-left: 0;
-      text-align: right !important;
+      text-align: right;
     }
 
     &:before, &:after {
@@ -242,7 +242,9 @@ footer {
 
       .card {
         margin-left: 70px !important;
-        width: calc(100% - 100px);
+        width: calc(100% - 75px);
+        font-size: 14px;
+        text-align: left!important;
       }
 
       .badge {
