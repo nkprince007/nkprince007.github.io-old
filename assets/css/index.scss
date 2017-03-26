@@ -1,7 +1,7 @@
 ---
 ---
 
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons|Raleway|Poppins|Roboto+Slab');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons|Raleway:200,400,700|Poppins|Roboto+Slab|Open+Sans:400,500,700');
 @import 'animate.scss';
 
 @font-face {
@@ -11,6 +11,7 @@
 
 html {
   background-color: #fafafa;
+  overflow-x: hidden;
 }
 
 footer {
@@ -49,6 +50,7 @@ footer {
 }
 #home {
   .welcome {
+    padding-top: 5%;
     clear: both;
     display: flex;
     flex-direction: row;
@@ -208,7 +210,109 @@ footer {
   }
 }
 
-@media only screen and (max-width: 760px) {
+#blog {
+  margin-bottom: 0;
+
+  .blog-title {
+    background-color: #673ab7;
+    padding: 5% 5% 2% 5%;
+    font-family: Raleway, sans-serif;
+
+    .title {
+      font-weight: 400;
+      color: white;
+    }
+
+    .description {
+      font-weight: 200;
+      color: #D7C9FC;
+    }
+  }
+
+  .blog-content {
+    ul.blog-list {
+      margin: 0;
+      padding: 0;
+
+      .collapsible-header {
+        padding-left: 20%;
+        padding-right: 20%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        font-size: 1.5rem;
+        font-weight: 500;
+        font-family: 'Open Sans', sans-serif;
+      }
+
+      .collapsible-body {
+        padding-left: 20%;
+        padding-right: 20%;
+        font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
+        font-size: 21px;
+        font-weight: normal;
+        font-style: normal;
+
+        a {
+          text-decoration: underline;
+        }
+
+        p, h1, h2, h3, h4, h5, h6 {
+          margin-top: 29px;
+        }
+
+        figure {
+          margin: 3%;
+        }
+
+        img {
+          max-width: 100%;
+        }
+
+        pre, code {
+          background-color: rgba(0, 0, 0, 0.0470588);
+          padding: 20px;
+          font-family: Menlo, Monaco, "Courier New", Courier, monospace;
+          white-space: pre-wrap;
+          font-size: 16px;
+        }
+
+        strong, b {
+          font-weight: bold !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1240px) {
+  #blog {
+    .blog-content {
+      ul.blog-list {
+        .collapsible-header {
+          padding-left: 7% !important;
+          padding-right: 7% !important;
+        }
+
+        .collapsible-body {
+          font-size: 18px !important;
+          padding-left: 9% !important;
+          padding-right: 9% !important;
+
+          p, h1, h2, h3, h4, h5, h6 {
+            margin-top: 24px;
+          }
+
+          pre, code {
+            padding: 15px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
   #home {
     .welcome {
       flex-direction: column;
@@ -249,6 +353,39 @@ footer {
 
       .badge {
         left: 0 !important;
+      }
+    }
+  }
+
+  #blog {
+    .blog-title {
+      .description {
+        font-size: 21px;
+      }
+    }
+
+    .blog-content {
+      ul.blog-list {
+        .collapsible-header {
+          padding-left: 5% !important;
+          padding-right: 5% !important;
+          font-size: 1.2rem;
+        }
+
+        .collapsible-body {
+          font-size: 18px !important;
+          padding-left: 6% !important;
+          padding-right: 6% !important;
+
+          p, h1, h2, h3, h4, h5, h6 {
+            margin-top: 18px;
+          }
+
+          pre, code {
+            padding: 10px;
+            font-size: 14px;
+          }
+        }
       }
     }
   }

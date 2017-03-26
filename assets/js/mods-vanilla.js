@@ -14,6 +14,10 @@ String.prototype.replaceAt = function (index, character) {
     return charArray.toString();
 }
 
+String.prototype.trimRegex = function (regex) {
+    return this.replace(regex, '');
+}
+
 function randomRange(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
