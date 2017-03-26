@@ -1,76 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ site.title }} | Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{ site.title }} | Home</title>
 
-    {% include base.html %}
+  {% include base.html %}
 </head>
+
 <body>
-    {% include header.html %}
+  {% include header.html %}
 
-    <div id="home" class="row">
-        <div class="welcome container">
-            <div class="owner-picture">
-                <div class="glitch-container">
-                    <img src="assets/img/nkprince007.jpg" alt="Sangi<br />Naveen Kumar" />
-                </div>
-            </div>
-            <div class="owner-content">
-                <h3 class="owner-title grey-text text-darken-4">
-                    Sangi<br />
-                    <span>Naveen Kumar</span>
-                </h3>
-                <div class="owner-details">
-                    <p data-juggle class="owner-subtitle">Web Developer, Designer & Software Enthusiast</p>
-                    <p class="owner-quote text-black text-lighten-2">
-                        “We all have ambitious goals for sure. But for me, it is not about size.
-                        It's about the quality — think Ferrari not Ford.”</p>
-                </div>
-            </div>
+  <div id="home" class="row">
+    <div class="welcome container">
+      <div class="owner-picture">
+        <div class="glitch-container">
+          <img src="assets/img/nkprince007.jpg" alt="Sangi<br>Naveen Kumar">
         </div>
-
-        <div id="about" class="container">
-            <p class="title flow-text center">What do I do?</p>
-            <div class="line-component">
-                <div class="card">
-                    <div class="card-content">
-                        <span class="card-title">Design</span>
-                        <p>I love to make things <b>in style</b>.<p>
-                        <p>My inspiration mostly comes from <a href="https://material.io">material design principles</a>.</p>
-                        <p>A visual language that reflects <b>clarity, interactivity
-                        and motion guidance</b> is what I believe <span class="green-text">a good design strategy</span>
-                        and try to adhere to it strictly.</p>
-                    </div>
-                </div>
-                <div class="blue badge"><i class="white-text fa fa-paint-brush"></i></div>
-            </div>
-            <div class="line-component">
-                <div class="card">
-                    <div class="card-content">
-                        <span class="card-title">Code</span>
-                        <p>I'm a <a>pythoneer</a> and primarily a web developer.</p>
-                        <p>I play around with frameworks like <b>django and flask</b>.</p>
-                        <p>I'm well versed around <span class="green-text">EcmaScript and jQuery</span> too.</p>
-                        <p>A bit of <span class="blue-text">Java</span> too, as a part of academics.</p>
-                    </div>
-                </div>
-                <div class="red badge"><i class="white-text fa fa-code"></i></div>
-            </div>
+      </div>
+      <div class="owner-content">
+        <h3 class="owner-title grey-text text-darken-4">
+          Sangi<br>
+          <span>Naveen Kumar</span>
+        </h3>
+        <div class="owner-details">
+          <p data-juggle class="owner-subtitle">Web Developer, Designer & Software Enthusiast</p>
+          <p class="owner-quote text-black text-lighten-2">
+            “We all have ambitious goals for sure. But for me, it is not about size. It's about the quality — think Ferrari not Ford.”</p>
         </div>
-
+      </div>
     </div>
-    <div id="blog" class="row">
-        <div class="blog-title"></div>
-        <div class="blog-content"></div>
+
+    <div id="about" class="container">
+      <p class="title flow-text center">What do I do?</p>
+      <div class="line-component">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Design</span>
+            <p>I love to make things <b>in style</b>.
+              <p>
+                <p>My inspiration mostly comes from <a href="https://material.io">material design principles</a>.</p>
+                <p>A visual language that reflects <b>clarity, interactivity
+                          and motion guidance</b> is what I believe <span class="green-text">a good design strategy</span>                  and try to adhere to it strictly.</p>
+          </div>
+        </div>
+        <div class="blue badge"><i class="white-text fa fa-paint-brush"></i></div>
+      </div>
+      <div class="line-component">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">Code</span>
+            <p>I'm a <a>pythoneer</a> and primarily a web developer.</p>
+            <p>I play around with frameworks like <b>django and flask</b>.</p>
+            <p>I'm well versed around <span class="green-text">EcmaScript and jQuery</span> too.</p>
+            <p>A bit of <span class="blue-text">Java</span> too, as a part of academics.</p>
+          </div>
+        </div>
+        <div class="red badge"><i class="white-text fa fa-code"></i></div>
+      </div>
     </div>
-    <div id="test3" class="col s12">Test 3</div>
 
-    {% include footer.html %}
+  </div>
+  <div id="blog" class="row">
+    <div class="blog-title"></div>
+    <div class="blog-content"></div>
+  </div>
+  <div id="test3" class="col s12">Test 3</div>
 
-    <link type="text/css" rel="stylesheet" href="assets/css/index.css" />
-    <script type="text/javascript" src="assets/js/index.js"></script>
+  {% include footer.html %}
+
+  <link rel="stylesheet" href="assets/css/index.css">
+  <script src="assets/js/index.js"></script>
 </body>
+
 </html>

@@ -1,56 +1,57 @@
 <style>
+  .page-footer .footer-btn {
+    padding: 10px;
+  }
+
+  @media only screen and (max-width: 760px) {
     .page-footer .footer-btn {
-        padding: 10px;
+      font-size: 12px;
+      padding: 5px;
     }
-    @media only screen and (max-width: 760px) {
-        .page-footer .footer-btn {
-            font-size: 12px;
-            padding: 5px;
-        }
-    }
+  }
 </style>
 
 <footer class="page-footer blue-grey darken-3">
-    <div class="container">
+  <div class="container">
     <div class="row">
-        <div class="col l4 s12">
+      <div class="col l4 s12">
         <h5 class="white-text title">Stalkers, welcome!</h5>
         <ul>
-            <li><a target="_blank" href="https://instagram.com/{{site.instagram_username}}">Instagram</a></li>
-            <li><a target="_blank" href="https://medium.com/my-new-roots">Blog on Medium</a></li>
-            <li><a target="_top" href="mailto:{{site.email}}">{{site.email}}</a></li>
-            <li><a target="_top" href="mailto:{{site.secondary_email}}">{{site.secondary_email}}</a></li>
+          <li><a target="_blank" href="https://instagram.com/{{site.instagram_username}}">Instagram</a></li>
+          <li><a target="_blank" href="https://medium.com/my-new-roots">Blog on Medium</a></li>
+          <li><a target="_top" href="mailto:{{site.email}}">{{site.email}}</a></li>
+          <li><a target="_top" href="mailto:{{site.secondary_email}}">{{site.secondary_email}}</a></li>
         </ul>
+      </div>
+      <div class="col l8 s12">
+        <div class="col s12 footer-btn-row">
+          <div class="col m6 s12 footer-btn">
+            <a target="_blank" href="https://twitter.com/{{site.twitter_username}}" class="col s12 waves-effect waves-light btn-large black">
+              <i class="fa fa-twitter" aria-hidden="true"></i> Follow me on twitter
+            </a>
+          </div>
+          <div class="col m6 s12 footer-btn">
+            <a target="_blank" href="https://github.com/{{site.twitter_username}}" class="col s12 waves-effect waves-light btn-large black">
+              <i class="fa fa-github" aria-hidden="true"></i> Follow me on github
+            </a>
+          </div>
         </div>
-        <div class="col l8 s12">
-            <div class="col s12 footer-btn-row">
-                <div class="col m6 s12 footer-btn">
-                    <a target="_blank" href="https://twitter.com/{{site.twitter_username}}" class="col s12 waves-effect waves-light btn-large black">
-                        <i class="fa fa-twitter" aria-hidden="true"></i> Follow me on twitter
-                    </a>
-                </div>
-                <div class="col m6 s12 footer-btn">
-                    <a target="_blank" href="https://github.com/{{site.twitter_username}}" class="col s12 waves-effect waves-light btn-large black">
-                        <i class="fa fa-github" aria-hidden="true"></i> Follow me on github
-                    </a>
-                </div>
-            </div>
-            <div class="col s12 footer-btn-row">
-                <div class="col s12 offset-m3 footer-btn">
-                    <a target="_blank" href="https://fb.com/{{site.facebook_username}}" class="col s12 m6 waves-effect waves-light btn-large black">
-                        <i class="fa fa-facebook" aria-hidden="true"></i> Follow me on Facebook
-                    </a>
-                </div>
-            </div>
+        <div class="col s12 footer-btn-row">
+          <div class="col s12 offset-m3 footer-btn">
+            <a target="_blank" href="https://fb.com/{{site.facebook_username}}" class="col s12 m6 waves-effect waves-light btn-large black">
+              <i class="fa fa-facebook" aria-hidden="true"></i> Follow me on Facebook
+            </a>
+          </div>
         </div>
+      </div>
     </div>
-    </div>
-    <div class="footer-copyright blue-grey darken-4">
+  </div>
+  <div class="footer-copyright blue-grey darken-4">
     <div class="container">
-        © 2017 nkprince007
-        <span class="right grey-text text-lighten-4">
+      © 2017 nkprince007
+      <span class="right grey-text text-lighten-4">
             Built using <a href="https://jquery.org/">jQuery</a>, <a href="http://materializecss.com/">materialize.css</a> and <a href="https://jekyllrb.com/">Jekyll</a>.
         </span>
     </div>
-    </div>
+  </div>
 </footer>
