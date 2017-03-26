@@ -1,12 +1,12 @@
 $(document).ready(() => {
   var elements = document.querySelectorAll('[data-chaffle]');
-  Array.prototype.forEach.call(elements, el => {
+  elements.forEach(el => {
     const chaffle = new Chaffle(el);
     setInterval(() => chaffle.init(), 5000);
   });
 
   var elements = document.querySelectorAll('[data-juggle]');
-  Array.prototype.forEach.call(elements, el => {
+  elements.forEach(el => {
     const juggle = new Juggle(el);
     $(el).mouseover(() => juggle.init());
     $(el).mouseout(() => juggle.stop());
@@ -23,6 +23,7 @@ $(document).ready(() => {
   const blogRootComponent = "#blog";
   const blogTitleComponent = "#blog .blog-title";
   const blogContentComponent = "#blog .blog-content";
+  const blogPreloaderComponent = "#blog .preloader";
 
   $.ajax({
     url: 'https://query.yahooapis.com/v1/public/yql',
@@ -30,6 +31,7 @@ $(document).ready(() => {
       q: "select * from xml where url='" + blogRSSUrl + "'",
       format: 'json'
     },
+    async: true
   }).then(data => {
     const channel = data.query.results.rss.channel;
 
@@ -79,6 +81,8 @@ $(document).ready(() => {
       postListItemElement.append(postBodyElement);
       postList.append(postListItemElement);
     });
+
+    $(blogPreloaderComponent).fadeOut(1000);
   }).catch(err => {
     console.error(err);
   });
@@ -86,6 +90,7 @@ $(document).ready(() => {
 
   // Custom materialize.css scripts
   $(".button-collapse").sideNav();
+  $("#preloader").fadeOut(500);
   $("#mobile-navbar li").on('click', event => {
     $("#mobile-navbar li a").each((i, el) => {
       var linkedDiv = $(el).attr('href');

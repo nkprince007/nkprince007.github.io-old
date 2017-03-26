@@ -6,9 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Oops! You're lost!</title>
-
-  {% include base.html %}
-  <link href="assets/css/not-found.css" rel="stylesheet">
 </head>
 
 <body>
@@ -20,6 +17,9 @@
     <a href="/" class="white-text base-link">Tune into my home frequency <i class="fa fa-arrow-right"></i></a>
   </div>
 
+  {% include styles.html %}
+  {% include scripts.html %}
+  <link href="assets/css/not-found.css" rel="stylesheet">
   <script src="assets/js/not-found.js"></script>
 </body>
 

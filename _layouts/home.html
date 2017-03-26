@@ -6,13 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{ site.title }} | Home</title>
-
-  {% include base.html %}
+  {% include styles.html %}
 </head>
 
 <body>
   {% include header.html %}
 
+  <div id="preloader" class="preloader white">
+    {% include preloader.html %}
+  </div>
   <div id="home" class="row">
     <div class="welcome container">
       <div class="owner-picture">
@@ -64,6 +66,9 @@
 
   </div>
   <div id="blog" class="row">
+    <div class="preloader white">
+      {% include preloader.html %}
+    </div>
     <div class="blog-title"></div>
     <div class="blog-content"></div>
   </div>
@@ -71,6 +76,7 @@
 
   {% include footer.html %}
 
+  {% include scripts.html %}
   <link rel="stylesheet" href="assets/css/index.css">
   <script src="assets/js/index.js"></script>
 </body>
