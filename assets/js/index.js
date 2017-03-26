@@ -89,23 +89,35 @@ $(document).ready(() => {
 
 
   // Custom materialize.css scripts
+  $("#preloader").fadeOut(1000);
+
+  // Navbar settings for mobile
   $(".button-collapse").sideNav({
     menuWidth: '75%',
     closeOnClick: true,
     draggable: true
   });
-  $("#preloader").fadeOut(500);
   $("#mobile-navbar li").on('click', event => {
     $("#mobile-navbar li a").each((i, el) => {
       var linkedDiv = $(el).attr('href');
       $(linkedDiv).removeClass('active');
-      $(linkedDiv).css('display', 'none');
+      $(linkedDiv).fadeOut(500);
     });
 
     var targetDiv = $(event.target).attr('href');
     $(targetDiv).addClass('active');
-    $(targetDiv).removeAttr('style');
+    $(targetDiv).fadeIn(500);
+  });
 
+  // Navbar large screen settings
+  $("#main-nav li a").on('click', event => {
+    $("#main-nav li a").each((i,el) => {
+      var linkedDiv = $(el).attr('href');
+      $(linkedDiv).fadeOut(1000);
+    });
+
+    var targetDiv = $(event.currentTarget).attr('href');
+    $(targetDiv).fadeIn(1000);
     $("html, body").animate({
       scrollTop: 0
     });
