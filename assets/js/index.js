@@ -89,7 +89,11 @@ $(document).ready(() => {
 
 
   // Custom materialize.css scripts
-  $(".button-collapse").sideNav();
+  $(".button-collapse").sideNav({
+    menuWidth: '75%',
+    closeOnClick: true,
+    draggable: true
+  });
   $("#preloader").fadeOut(500);
   $("#mobile-navbar li").on('click', event => {
     $("#mobile-navbar li a").each((i, el) => {
@@ -102,7 +106,6 @@ $(document).ready(() => {
     $(targetDiv).addClass('active');
     $(targetDiv).removeAttr('style');
 
-    $(".button-collapse").sideNav('hide');
     $("html, body").animate({
       scrollTop: 0
     });

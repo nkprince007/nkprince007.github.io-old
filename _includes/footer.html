@@ -1,12 +1,22 @@
 <style>
-  .page-footer .footer-btn {
-    padding: 10px;
+  .page-footer .title {
+    font-weight: lighter !important;
   }
-
+  .page-footer .footer-btn {
+    padding: 10px !important;
+  }
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  main {
+    flex: 1 0 auto;
+  }
   @media only screen and (max-width: 760px) {
     .page-footer .footer-btn {
       font-size: 12px;
-      padding: 5px;
+      padding: 5px !important;
     }
   }
 </style>

@@ -9,13 +9,17 @@
 </head>
 
 <body>
-  <canvas id="static"></canvas>
-  <div class="error container">
-    <h3 class="message center">[ 404 ]</h3>
-    <p class="text">Sorry folks!</p>
-    <p class="text">No channel found on this frequency.</p>
-    <a href="/" class="white-text base-link">Tune into my home frequency <i class="fa fa-arrow-right"></i></a>
-  </div>
+  <main>
+    <canvas id="static"></canvas>
+    <div class="error container">
+      <h3 class="message center">[ 404 ]</h3>
+      <p class="text">Sorry folks!</p>
+      <p class="text">No channel found on this frequency.</p>
+      <a href="/" class="white-text base-link">Tune into my home frequency <i class="fa fa-arrow-right"></i></a>
+    </div>
+  </main>
+
+  {% include footer.html %}
 
   {% include styles.html %}
   {% include scripts.html %}
