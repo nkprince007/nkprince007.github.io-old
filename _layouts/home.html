@@ -66,10 +66,16 @@
       <section id="contact-form" class="container">
         <p class="title flow-text center">Get in touch!</p>
         <div class="row">
-          <form action="" class="col s12">
+          <div class="form-preloader" style="display: none">
+            {% include preloader.html %}
+          </div>
+          <form
+            action="https://script.google.com/macros/s/AKfycbyCr7DdspVXnGlyXr3QFFkrNoI32arcybPx_8GQ34MaaI1nfZE/exec"
+            class="col s12"
+            method="POST">
             <div class="row">
               <div class="input-field col s12 m6">
-                <input type="text" id="name" class="validate"
+                <input type="text" id="name" class="validate" name="name"
                   pattern="[A-Za-z][A-Za-z0-9\s]*" required>
                 <label
                   for="first_name"
@@ -77,7 +83,7 @@
                   data-success="Nice name, pal. 😉">What's your name?</label>
               </div>
               <div class="input-field col s12 m6">
-                <input type="email" id="email" class="validate">
+                <input type="email" id="email" class="validate" name="email">
                 <label
                   for="email"
                   data-error="Is it an email address? 😡"
@@ -87,15 +93,21 @@
             </div>
             <div class="row">
               <div class="input-field col s12">
-                <textarea id="message" class="materialize-textarea"></textarea>
+                <textarea id="message" class="materialize-textarea" name="message"></textarea>
                 <label for="message">So, what's the matter, dear?</label>
               </div>
             </div>
-            <div class="g-recaptcha"
-              data-sitekey="6LeweRoUAAAAAHpeDC9CyX7KbIqqKGbf5BHAg8M4"></div>
+            <div class="row">
+              <div class="g-recaptcha"
+                data-sitekey="6LeweRoUAAAAAHpeDC9CyX7KbIqqKGbf5BHAg8M4"
+                data-callback="enableSend"
+                data-expired-callback="disableSend">
+              </div>
+            </div>
             <div class="row">
               <button
-                class="btn btn-large waves-effect waves-light right"
+                id="send"
+                class="disabled btn btn-large waves-effect waves-light right"
                 type="submit"
                 name="action">Submit <i class="fa fa-paper-plane"></i>
               </button>

@@ -1,5 +1,6 @@
 ---
 ---
+$background-color: #fafafa;
 
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons|Raleway:200,400,700|Poppins|Roboto+Slab|Open+Sans:400,500,700');
 @import 'animate.scss';
@@ -10,7 +11,7 @@
 }
 
 html {
-  background-color: #fafafa;
+  background-color: $background-color;
   overflow-x: hidden;
 }
 
@@ -289,6 +290,20 @@ html {
   .title {
     font-family: Roboto Slab, sans-serif;
     text-transform: uppercase;
+  }
+
+  .row {
+    position: relative;
+  }
+
+  .form-preloader {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: $background-color;
+    z-index: 2;
   }
 
   .g-recaptcha {

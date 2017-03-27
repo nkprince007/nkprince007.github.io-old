@@ -1,3 +1,61 @@
+var CONTACT_FROM_ELEMENT_IDS = [
+  'name',
+  'email',
+  'message'
+]
+
+function enableSend() {
+  document.getElementById('send').classList.remove('disabled');
+}
+
+function disableSend() {
+  document.getElementById('send').classList.add('disabled');
+}
+
+$(window).on('load', () => {
+  $("#contact-form form").submit(event => {
+    event.preventDefault();
+    var form = $("#contact-form form");
+    var values = form.serializeArray();
+
+    // show a preloader
+    $("#contact-form .form-preloader").fadeIn();
+
+    $.ajax({
+      url: form.attr('action'),
+      method: "POST",
+      data: values,
+      async: true
+    }).then(data => {
+      console.log(data);
+      // show success message
+      if (data['result'] === 'success') {
+        form.trigger('reset');
+        form.prepend($("<div />", {
+          class: "sucess green-text"
+        }).text("My ❤️ just keeps thanking you and thanking you. 😊")
+          .fadeOut(5000));
+      } else {
+        throw new Error("😰 Sorry, your message got lost with the wind!")
+      }
+    }).catch(error => {
+      console.error(error);
+      form.trigger('reset');
+
+      // show error message
+      form.prepend($("<div />", {
+        class: "error red-text"
+      }).text(error.message).fadeOut(10000));
+
+    }).always(() => {
+
+      grecaptcha.reset();
+      // hide the preloader
+      $("#contact-form .form-preloader").fadeOut();
+    });
+  });
+});
+
 $(document).ready(() => {
   var elements = document.querySelectorAll('[data-chaffle]');
   elements.forEach(el => {
@@ -87,7 +145,6 @@ $(document).ready(() => {
     console.error(err);
   });
 
-
   // Custom materialize.css scripts
   $("#preloader").fadeOut(1000);
 
@@ -111,7 +168,7 @@ $(document).ready(() => {
 
   // Navbar large screen settings
   $("#main-nav li a").on('click', event => {
-    $("#main-nav li a").each((i,el) => {
+    $("#main-nav li a").each((i, el) => {
       var linkedDiv = $(el).attr('href');
       $(linkedDiv).fadeOut(1000);
     });
