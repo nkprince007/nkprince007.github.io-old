@@ -44,9 +44,13 @@ html {
   }
 }
 #home {
-  .welcome {
-    padding-top: 5%;
+
+  section {
+    padding: 3%;
     clear: both;
+  }
+
+  .welcome {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -275,6 +279,21 @@ html {
           font-weight: bold !important;
         }
       }
+    }
+  }
+}
+
+#contact-form {
+  position: relative;
+
+  .title {
+    font-family: Roboto Slab, sans-serif;
+    text-transform: uppercase;
+  }
+
+  .g-recaptcha {
+    div {
+      margin: 0 auto;
     }
   }
 }

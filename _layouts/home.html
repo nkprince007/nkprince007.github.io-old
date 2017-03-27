@@ -17,7 +17,7 @@
       {% include preloader.html %}
     </div>
     <div id="home" class="row">
-      <div class="welcome container">
+      <section class="welcome container">
         <div class="owner-picture">
           <div class="glitch-container">
             <img src="assets/img/nkprince007.jpg" alt="Sangi<br>Naveen Kumar">
@@ -34,19 +34,17 @@
               “We all have ambitious goals for sure. But for me, it is not about size. It's about the quality — think Ferrari not Ford.”</p>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div id="about" class="container">
+      <section id="about" class="container">
         <p class="title flow-text center">What do I do?</p>
         <div class="line-component">
           <div class="card">
             <div class="card-content">
               <span class="card-title">Design</span>
-              <p>I love to make things <b>in style</b>.
-                <p>
-                  <p>My inspiration mostly comes from <a href="https://material.io">material design principles</a>.</p>
-                  <p>A visual language that reflects <b>clarity, interactivity
-                            and motion guidance</b> is what I believe <span class="green-text">a good design strategy</span>                  and try to adhere to it strictly.</p>
+              <p>I love to make things <b>in style</b>.</p>
+              <p>My inspiration mostly comes from <a href="https://material.io">material design principles</a>.</p>
+              <p>A visual language that reflects <b>clarity, interactivity and motion guidance</b> is what I believe <span class="green-text">a good design strategy</span>                    and try to adhere to it strictly.</p>
             </div>
           </div>
           <div class="blue badge"><i class="white-text fa fa-paint-brush"></i></div>
@@ -63,8 +61,48 @@
           </div>
           <div class="red badge"><i class="white-text fa fa-code"></i></div>
         </div>
-      </div>
+      </section>
 
+      <section id="contact-form" class="container">
+        <p class="title flow-text center">Get in touch!</p>
+        <div class="row">
+          <form action="" class="col s12">
+            <div class="row">
+              <div class="input-field col s12 m6">
+                <input type="text" id="name" class="validate"
+                  pattern="[A-Za-z][A-Za-z0-9\s]*" required>
+                <label
+                  for="first_name"
+                  data-error="Oh, god! Stop trying to trick me. 😓"
+                  data-success="Nice name, pal. 😉">What's your name?</label>
+              </div>
+              <div class="input-field col s12 m6">
+                <input type="email" id="email" class="validate">
+                <label
+                  for="email"
+                  data-error="Is it an email address? 😡"
+                  data-success="Alright! 👍🏻"
+                  required>Your email address, please!</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea id="message" class="materialize-textarea"></textarea>
+                <label for="message">So, what's the matter, dear?</label>
+              </div>
+            </div>
+            <div class="g-recaptcha"
+              data-sitekey="6LeweRoUAAAAAHpeDC9CyX7KbIqqKGbf5BHAg8M4"></div>
+            <div class="row">
+              <button
+                class="btn btn-large waves-effect waves-light right"
+                type="submit"
+                name="action">Submit <i class="fa fa-paper-plane"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
     </div>
     <div id="blog" class="row">
       <div class="preloader white">
@@ -81,6 +119,9 @@
   {% include scripts.html %}
   <link rel="stylesheet" href="assets/css/index.css">
   <script src="assets/js/index.js"></script>
+
+  <!--Google reCAPTCHA v2 API-->
+  <script src='https://www.google.com/recaptcha/api.js'></script>
 </body>
 
 </html>
