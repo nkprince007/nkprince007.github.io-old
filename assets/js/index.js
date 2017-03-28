@@ -327,7 +327,12 @@ $(document).ready(() => {
   });
 
   // Custom materialize.css scripts
+
+  // Fade out the preloader
   $("#preloader").fadeOut(1000);
+
+  // Nasty tab indicator fix
+  $('ul.tabs').tabs();
 
   // Navbar settings for mobile
   $(".button-collapse").sideNav({
@@ -344,7 +349,13 @@ $(document).ready(() => {
 
     var targetDiv = $(event.target).attr('href');
     $(targetDiv).addClass('active');
-    $(targetDiv).fadeIn(500);
+    $(targetDiv).fadeIn(500, () => {
+      $(".github .project-container").masonry();
+      $(".gitlab .project-container").masonry();
+    });
+
+    $(".github .project-container").masonry();
+    $(".gitlab .project-container").masonry();
   });
 
   // Navbar large screen settings
@@ -355,9 +366,12 @@ $(document).ready(() => {
     });
 
     var targetDiv = $(event.currentTarget).attr('href');
-    $(targetDiv).fadeIn(1000);
     $("html, body").animate({
       scrollTop: 0
+    });
+    $(targetDiv).fadeIn(1000, () => {
+      $(".github .project-container").masonry();
+      $(".gitlab .project-container").masonry();
     });
   });
 });
