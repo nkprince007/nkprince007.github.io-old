@@ -13,13 +13,14 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: nkprince007
+title: Sangi Naveen Kumar
 email: nkprince007@gmail.com
+author: Sangi Naveen Kumar
 secondary_email: nkprince007@icloud.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Sangi Naveen Kumar - Web Developer, Designer and Software Enthusiast. I love
+  creating things with a new perspective. An ardent lover of "Keep it simple, silly." policy.
+  CSE Undergraduate @ NIT Durgapur. Goes by the handle, nkprince007.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://nkprince007.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: nkprince007
