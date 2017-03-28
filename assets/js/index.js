@@ -28,16 +28,17 @@ $(window).on('load', () => {
       data: values,
       async: true
     }).then(data => {
-      console.log(data);
       // show success message
       if (data['result'] === 'success') {
         form.trigger('reset');
         form.prepend($("<div />", {
-          class: "sucess green-text"
-        }).text("My ❤️ just keeps thanking you and thanking you. 😊")
+            class: "sucess green-text"
+          }).text("My ❤️ just keeps thanking you and thanking you. 😊")
           .fadeOut(5000));
       } else {
-        throw new Error("😰 Sorry, your message got lost with the wind!")
+        if (data['error'] === "Captcha verification failed!")
+          throw new Error("😪 CAPTCHA was put there for a reason!");
+        throw new Error("😰 Sorry, your message got lost with the wind!");
       }
     }).catch(error => {
       console.error(error);
