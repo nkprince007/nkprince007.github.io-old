@@ -24,131 +24,120 @@
     <div id="preloader" class="preloader white">
       {% include preloader.html %}
     </div>
-    <div id="home" class="row">
-      <section class="welcome container">
-        <div class="owner-picture">
-          <div class="glitch-container">
-            <img src="assets/img/nkprince007.jpg" alt="Sangi<br>Naveen Kumar">
+    <div class="hidden-until-ready">
+      <!--Home section-->
+      <div id="home" class="row">
+        <section class="welcome container">
+          <div class="owner-picture">
+            <div class="glitch-container">
+              <img src="assets/img/nkprince007.jpg" alt="Sangi<br>Naveen Kumar">
+            </div>
           </div>
-        </div>
-        <div class="owner-content">
-          <h3 class="owner-title grey-text text-darken-4">
-            Sangi<br>
-            <span>Naveen Kumar</span>
-          </h3>
-          <div class="owner-details">
-            <p data-juggle class="owner-subtitle">Web Developer, Designer & Software Enthusiast</p>
-            <p class="owner-quote text-black text-lighten-2">
-              “We all have ambitious goals for sure. But for me, it is not about size. It's about the quality — think Ferrari not Ford.”</p>
+          <div class="owner-content">
+            <h3 class="owner-title grey-text text-darken-4">
+              Sangi<br>
+              <span>Naveen Kumar</span>
+            </h3>
+            <div class="owner-details">
+              <p data-juggle class="owner-subtitle">Web Developer, Designer & Software Enthusiast</p>
+              <p class="owner-quote text-black text-lighten-2">
+                “We all have ambitious goals for sure. But for me, it is not about size. It's about the quality — think Ferrari not Ford.”</p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section id="about" class="container">
-        <p class="title flow-text center">What do I do?</p>
-        <div class="line-component">
-          <div class="card">
-            <div class="card-content">
-              <span class="card-title">Design</span>
-              <p>I love to make things <b>in style</b>.</p>
-              <p>My inspiration mostly comes from <a href="https://material.io">material design principles</a>.</p>
-              <p>A visual language that reflects <b>clarity, interactivity and motion guidance</b> is what I believe <span class="green-text">a good design strategy</span>                    and try to adhere to it strictly.</p>
+        <section id="about" class="container">
+          <p class="title flow-text center">What do I do?</p>
+          <div class="line-component">
+            <div class="card">
+              <div class="card-content">
+                <span class="card-title">Design</span>
+                <p>I love to make things <b>in style</b>.</p>
+                <p>My inspiration mostly comes from <a href="https://material.io">material design principles</a>.</p>
+                <p>A visual language that reflects <b>clarity, interactivity and motion guidance</b> is what I believe
+                  <span class="green-text">a good design strategy</span> and try to adhere to it strictly.</p>
+              </div>
             </div>
+            <div class="blue badge"><i class="white-text fa fa-paint-brush"></i></div>
           </div>
-          <div class="blue badge"><i class="white-text fa fa-paint-brush"></i></div>
-        </div>
-        <div class="line-component">
-          <div class="card">
-            <div class="card-content">
-              <span class="card-title">Code</span>
-              <p>I'm a <a>pythoneer</a> and primarily a web developer.</p>
-              <p>I play around with frameworks like <b>django and flask</b>.</p>
-              <p>I'm well versed around <span class="green-text">EcmaScript and jQuery</span> too.</p>
-              <p>A bit of <span class="blue-text">Java</span> too, as a part of academics.</p>
+          <div class="line-component">
+            <div class="card">
+              <div class="card-content">
+                <span class="card-title">Code</span>
+                <p>I'm a <a>pythoneer</a> and primarily a web developer.</p>
+                <p>I play around with frameworks like <b>django and flask</b>.</p>
+                <p>I'm well versed around <span class="green-text">EcmaScript and jQuery</span> too.</p>
+                <p>A bit of <span class="blue-text">Java</span> too, as a part of academics.</p>
+              </div>
             </div>
+            <div class="red badge"><i class="white-text fa fa-code"></i></div>
           </div>
-          <div class="red badge"><i class="white-text fa fa-code"></i></div>
-        </div>
-      </section>
+        </section>
 
-      <section id="contact-form" class="container">
-        <p class="title flow-text center">Get in touch!</p>
-        <div class="row">
-          <div class="form-preloader" style="display: none">
-            {% include preloader.html %}
-          </div>
-          <form
-            action="https://script.google.com/macros/s/AKfycbyCr7DdspVXnGlyXr3QFFkrNoI32arcybPx_8GQ34MaaI1nfZE/exec"
-            class="col s12"
-            method="POST">
-            <div class="row">
-              <div class="input-field col s12 m6">
-                <input type="text" id="name" class="validate" name="name"
-                  pattern="[A-Za-z][A-Za-z0-9\s]*" required>
-                <label
-                  for="first_name"
-                  data-error="Oh, god! Stop trying to trick me. 😓"
-                  data-success="Nice name, pal. 😉">What's your name?</label>
-              </div>
-              <div class="input-field col s12 m6">
-                <input type="email" id="email" class="validate" name="email">
-                <label
-                  for="email"
-                  data-error="Is it an email address? 😡"
-                  data-success="Alright! 👍🏻"
-                  required>Your email address, please!</label>
-              </div>
+        <section id="contact-form" class="container">
+          <p class="title flow-text center">Get in touch!</p>
+          <div class="row">
+            <div class="form-preloader" style="display: none">
+              {% include preloader.html %}
             </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <textarea id="message" class="materialize-textarea" name="message"></textarea>
-                <label for="message">So, what's the matter, dear?</label>
+            <form action="https://script.google.com/macros/s/AKfycbyCr7DdspVXnGlyXr3QFFkrNoI32arcybPx_8GQ34MaaI1nfZE/exec" class="col s12"
+              method="POST">
+              <div class="row">
+                <div class="input-field col s12 m6">
+                  <input type="text" id="name" class="validate" name="name" pattern="[A-Za-z][A-Za-z0-9\s]*" required>
+                  <label for="first_name" data-error="Oh, god! Stop trying to trick me. 😓" data-success="Nice name, pal. 😉">What's your name?</label>
+                </div>
+                <div class="input-field col s12 m6">
+                  <input type="email" id="email" class="validate" name="email">
+                  <label for="email" data-error="Is it an email address? 😡" data-success="Alright! 👍🏻" required>Your email address, please!</label>
+                </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="g-recaptcha"
-                data-sitekey="6LeweRoUAAAAAHpeDC9CyX7KbIqqKGbf5BHAg8M4"
-                data-callback="enableSend"
-                data-expired-callback="disableSend">
+              <div class="row">
+                <div class="input-field col s12">
+                  <textarea id="message" class="materialize-textarea" name="message"></textarea>
+                  <label for="message">So, what's the matter, dear?</label>
+                </div>
               </div>
-            </div>
-            <div class="row">
-              <button
-                id="send"
-                class="disabled btn medium waves-effect waves-light right"
-                type="submit"
-                name="action">Submit <i class="fa fa-paper-plane"></i>
+              <div class="row">
+                <div class="g-recaptcha" data-sitekey="6LeweRoUAAAAAHpeDC9CyX7KbIqqKGbf5BHAg8M4" data-callback="enableSend" data-expired-callback="disableSend">
+                </div>
+              </div>
+              <div class="row">
+                <button id="send" class="disabled btn medium waves-effect waves-light right" type="submit" name="action">Submit <i class="fa fa-paper-plane"></i>
               </button>
-            </div>
-          </form>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+
+      <!--Blog section-->
+      <div id="blog" class="row">
+        <div class="preloader white">
+          {% include preloader.html %}
         </div>
-      </section>
-    </div>
-    <div id="blog" class="row">
-      <div class="preloader white">
-        {% include preloader.html %}
+        <div class="blog-title"></div>
+        <div class="blog-content"></div>
       </div>
-      <div class="blog-title"></div>
-      <div class="blog-content"></div>
-    </div>
-    <div id="projects" class="row">
-      <div class="preloader white">
-        {% include preloader.html %}
-      </div>
-      <div class="section-banner red white-text">
-        <h1 class="title">Opensource Projects</h1>
-        <h4 class="description">Some of my works...</h4>
-      </div>
-      <div class="container">
-        <div class="project-row row github"></div>
-        <div class="project-row row gitlab"></div>
+
+      <!--Projects section-->
+      <div id="projects" class="row">
+        <div class="preloader white">
+          {% include preloader.html %}
+        </div>
+        <div class="section-banner red white-text">
+          <h2 class="title">Opensource Projects</h2>
+          <h5 class="description">Some of my works...</h5>
+        </div>
+        <div class="container">
+          <div class="project-row row github"></div>
+          <div class="project-row row gitlab"></div>
+        </div>
       </div>
     </div>
   </main>
 
-  {% include footer.html %}
-
-  {% include scripts.html %}
+  {% include footer.html %} {% include scripts.html %}
   <link rel="stylesheet" href="assets/css/index.css">
   <script src="assets/js/index.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.1.1/masonry.pkgd.min.js"></script>

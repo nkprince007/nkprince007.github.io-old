@@ -2,3 +2,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
 <script src="assets/js/mods-vanilla.js"></script>
 <script src="assets/js/effects.js"></script>
+
+<script>
+  window.onload = (e) => {
+    document.querySelectorAll(".hidden-until-ready").forEach(el => {
+      el.classList.remove('hidden-until-ready');
+    });
+  };
+</script>

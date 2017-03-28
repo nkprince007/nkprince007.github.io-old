@@ -13,6 +13,13 @@ function disableSend() {
 }
 
 $(window).on('load', () => {
+
+  // Fade out the preloader
+  $("#preloader").fadeOut(1000);
+
+  // Nasty tab indicator fix
+  $('ul.tabs').tabs();
+
   // Add submit handler via ajax for contact form
   $("#contact-form form").submit(event => {
     event.preventDefault();
@@ -277,10 +284,10 @@ $(document).ready(() => {
     const blogDescription = channel.description.trimRegex(/\s+-\s+Medium/g);
     const channelTitle = channel.image.title.trimRegex(/\s+-\s+Medium/g);
 
-    var titleElement = $("<h1 />", {
+    var titleElement = $("<h2 />", {
       class: 'title'
     });
-    var descriptionElement = $("<h4 />", {
+    var descriptionElement = $("<h5 />", {
       class: 'description'
     });
     var postList = $('<ul />', {
@@ -328,12 +335,6 @@ $(document).ready(() => {
 
   // Custom materialize.css scripts
 
-  // Fade out the preloader
-  $("#preloader").fadeOut(1000);
-
-  // Nasty tab indicator fix
-  $('ul.tabs').tabs();
-
   // Navbar settings for mobile
   $(".button-collapse").sideNav({
     menuWidth: '75%',
@@ -360,7 +361,7 @@ $(document).ready(() => {
 
   // Navbar large screen settings
   $("#main-nav li a").on('click', event => {
-    $("#main-nav li a").each((i, el) => {
+    $("#main-nav li a:not(#main-nav li a.active)").each((i, el) => {
       var linkedDiv = $(el).attr('href');
       $(linkedDiv).fadeOut(1000);
     });
