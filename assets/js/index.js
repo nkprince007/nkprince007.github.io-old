@@ -80,6 +80,178 @@ $(document).ready(() => {
   });
 
   /*
+   * Opensource repo parser
+   *
+   * Author: nkprince007@icloud.com
+   */
+  const GITHUB_USERNAME = "nkprince007";
+  const GITHUB_REPOS_URL = (
+    "https://api.github.com/search/repositories" +
+    "?q=%20+fork:true+user:" +
+    GITHUB_USERNAME);
+  const githubDiv = $("#projects .github");
+
+  $.ajax({
+    url: GITHUB_REPOS_URL,
+    async: true
+  }).then(data => {
+    var container = $("<div />", {
+      class: 'project-container'
+    });
+
+    githubDiv.append(
+      $("<h4 />", {
+        class: "project-banner"
+      }).html("GitHub&nbsp;").append($("<i />", {
+        class: "fa fa-github"
+      })));
+    githubDiv.append(container);
+    $("#projects .preloader").fadeOut(1000);
+
+    data.items.forEach(repo => {
+      /**
+       * Properties:
+       * - html_url: GitHub repo's URL.
+       * - name: Name of the project.
+       * - languages_url: Languages used.
+       *
+       * Optional properties:
+       * - description: Description of repository, if any.
+       * - homepage: Homepage for the repository, if any.
+       */
+      var col = $("<div />", {
+        class: "col m6 s12 left-align"
+      });
+      var card = $("<div />", {
+        class: "project card hoverable"
+      });
+      var cardContent = $("<div />", {
+        class: "card-content"
+      });
+      var cardAction = $("<div />", {
+        class: "card-action"
+      });
+      var link = $("<a />", {
+        href: repo["homepage"] === null || repo["homepage"] === "" ?
+          repo["html_url"] : repo["homepage"],
+        target: "_blank"
+      });
+
+      cardContent.append($("<p />", {
+        class: "card-description"
+      }).text(repo['description']));
+
+      cardContent.prepend($("<p />", {
+        class: "card-title truncate"
+      }).text(repo['name']));
+
+      link.append(cardContent);
+      link.append(cardAction);
+      card.append(link)
+      col.append(card);
+      container.append(col);
+
+      $.ajax({
+        url: repo["languages_url"],
+        async: true
+      }).then((languages) => {
+        $.each(languages, (k, v) => {
+          cardAction.append($("<span />", {
+            class: "chip"
+          }).text(k));
+        });
+      }).then(() => {
+        $(".github .project-container").masonry();
+      }).catch(() => {
+        cardAction.remove();
+      });
+    });
+  }).then(() => {
+    $(".github .project-container").masonry();
+  }).catch(error => {
+    console.error(error);
+    $("#projects .preloader").fadeOut(1000);
+  });
+
+  const GITLAB_READ_ONLY_ACCESS_TOKEN = "FxLtX2xsiY_AhxBSZ2Kx";
+  const GITLAB_REPOS_URL = "https://gitlab.com/api/v3/projects";
+  const gitlabDiv = $("#projects .gitlab");
+
+  $.ajax({
+    url: GITLAB_REPOS_URL,
+    data: {
+      private_token: GITLAB_READ_ONLY_ACCESS_TOKEN
+    },
+    async: true
+  }).then(repos => {
+    var container = $("<div />", {
+      class: 'project-container'
+    });
+
+    gitlabDiv.append(
+      $("<h4 />", {
+        class: "project-banner"
+      }).html("GitLab&nbsp;").append($("<i />", {
+        class: "fa fa-gitlab"
+      })));
+
+    gitlabDiv.append(container);
+    $("#projects .preloader").fadeOut(1000);
+
+    repos.forEach(repo => {
+      /**
+       * Properties:
+       * - web_url: GitLab repo's URL.
+       * - name: Name of the repository.
+       * - star_count: No. of stars.
+       *
+       * Optional properties:
+       * - description: Description of the repository, if any.
+       */
+      var col = $("<div />", {
+        class: "col m6 s12 left-align"
+      });
+      var card = $("<div />", {
+        class: "project card hoverable"
+      });
+      var cardContent = $("<div />", {
+        class: "card-content"
+      });
+      var cardAction = $("<div />", {
+        class: "card-action"
+      });
+      var link = $("<a />", {
+        href: repo["web_url"],
+        target: "_blank"
+      });
+
+      cardContent.append($("<p />", {
+        class: "card-description"
+      }).text(repo["description"]));
+
+      cardAction.append($("<span />", {
+        class: "chip"
+      }).html('<i class="fa fa-star"></i>&nbsp;' + repo["star_count"]));
+
+      cardContent.prepend($("<p />", {
+        class: "card-title"
+      }).text(repo["name"]));
+
+      link.append(cardContent);
+      link.append(cardAction);
+      card.append(link)
+      col.append(card);
+      container.append(col);
+    });
+  }).then(() => {
+    // Enable masonry grid here
+    $(".gitlab .project-container").masonry();
+  }).catch(error => {
+    console.error(error);
+    $("#projects .preloader").fadeOut(1000);
+  });
+
+  /*
    * Blog parser for Medium using YQL!
    *
    * Author: nkprince007@icloud.com

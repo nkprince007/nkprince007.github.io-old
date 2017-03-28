@@ -135,7 +135,7 @@ html {
   position: relative;
 
   .title {
-    font-family: Roboto Slab, sans-serif;
+    font-family: Roboto Slab, serif;
     text-transform: uppercase;
   }
 
@@ -309,6 +309,51 @@ html {
   .g-recaptcha {
     div {
       margin: 0 auto;
+    }
+  }
+}
+
+#projects {
+  margin-bottom: 0;
+  background-color: $background-color;
+
+  .section-banner {
+    padding: 5% 5% 2% 5%;
+    font-family: Raleway, sans-serif;
+
+    .title {
+      font-weight: 400;
+      color: white;
+    }
+
+    .description {
+      font-weight: 200;
+      color: #D7C9FC;
+    }
+  }
+
+  .project-row {
+    padding: 2.5% 2% 2.5% 2%;
+    text-align: center;
+    font-color: black!important;
+
+    .project-banner {
+      font-weight: 400;
+      font-family: Roboto Slab, sans-serif;
+    }
+
+    .project {
+      margin: 3% 5%;
+
+      .card-title {
+        font-size: 22px !important;
+        font-weight: 300;
+        font-family: Poppins, Helvetica, Arial, sans-serif;
+      }
+
+      .card-content {
+        color: black !important;
+      }
     }
   }
 }

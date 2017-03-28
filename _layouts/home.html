@@ -131,7 +131,19 @@
       <div class="blog-title"></div>
       <div class="blog-content"></div>
     </div>
-    <div id="test3" class="col s12">Test 3</div>
+    <div id="projects" class="row">
+      <div class="preloader white">
+        {% include preloader.html %}
+      </div>
+      <div class="section-banner red white-text">
+        <h1 class="title">Opensource Projects</h1>
+        <h4 class="description">Some of my works...</h4>
+      </div>
+      <div class="container">
+        <div class="project-row row github"></div>
+        <div class="project-row row gitlab"></div>
+      </div>
+    </div>
   </main>
 
   {% include footer.html %}
@@ -139,6 +151,7 @@
   {% include scripts.html %}
   <link rel="stylesheet" href="assets/css/index.css">
   <script src="assets/js/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.1.1/masonry.pkgd.min.js"></script>
   {% include google-scripts.html %}
 
 </body>
