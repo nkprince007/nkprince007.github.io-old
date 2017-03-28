@@ -13,6 +13,7 @@ function disableSend() {
 }
 
 $(window).on('load', () => {
+  // Add submit handler via ajax for contact form
   $("#contact-form form").submit(event => {
     event.preventDefault();
     var form = $("#contact-form form");
@@ -57,6 +58,13 @@ $(window).on('load', () => {
 });
 
 $(document).ready(() => {
+  // Load deferred styles
+  var addStylesNode = $("#deferred-styles");
+  var replacement = $("<div />");
+  replacement.html(addStylesNode.text());
+  $("head").append(replacement);
+  addStylesNode.remove();
+
   var elements = document.querySelectorAll('[data-chaffle]');
   elements.forEach(el => {
     const chaffle = new Chaffle(el);
