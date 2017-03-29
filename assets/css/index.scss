@@ -2,7 +2,7 @@
 ---
 $background-color: #fafafa;
 
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons|Raleway:200,400,700|Poppins|Roboto+Slab|Open+Sans:400,500,700');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons|Raleway:200,400,700|Poppins|Roboto+Slab|Open+Sans:400,500,700|Space+Mono');
 @import 'animate.scss';
 
 @font-face {
@@ -31,8 +31,9 @@ html {
 
     .tab {
       a {
+        font-family: Space Mono, monospace;
         letter-spacing: 4px;
-        font-size: 14px;
+        font-size: 16px;
         text-overflow: ellipsis;
         overflow: hidden;
         color: grey !important;
