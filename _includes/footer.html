@@ -1,22 +1,62 @@
 <style>
+  .page-footer {
+    padding: 0;
+  }
+
+  .page-footer .row {
+    margin: 0 auto;
+  }
+
+  .page-footer > .container {
+    padding: 30px 0;
+  }
+
   .page-footer .title {
+    font-size: 18px;
+    text-transform: lowercase;
     font-weight: lighter !important;
   }
-  .page-footer .footer-btn {
-    padding: 10px !important;
-  }
+
   body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
   }
+
   main {
     flex: 1 0 auto;
   }
+
+  .page-footer .social-links a {
+    font-size: 1.6rem;
+    display: inline-block;
+    height: 36px;
+    width: 36px;
+    margin: 0 4px;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+    transition: all .5s ease;
+  }
+
+  .page-footer .social-links a:hover {
+    background-color: black;
+    color: white;
+  }
+
+  .page-footer .social-links a i {
+    padding: 6px;
+  }
+
   @media only screen and (max-width: 760px) {
-    .page-footer .footer-btn {
+    .page-footer .title {
       font-size: 12px;
-      padding: 5px !important;
+    }
+    .page-footer .social-links {
+      padding: 5%;
+    }
+    .page-footer > .container {
+      padding: 20px 0 !important;
     }
   }
 </style>
@@ -24,45 +64,24 @@
 <footer class="page-footer blue-grey darken-3">
   <div class="container">
     <div class="row">
-      <div class="col l4 s12">
-        <h5 class="white-text title">Stalkers, welcome!</h5>
-        <ul>
-          <li><a target="_blank" href="https://www.linkedin.com/in/{{site.linkedin_username}}/">LinkedIn</a></li>
-          <li><a target="_blank" href="https://instagram.com/{{site.instagram_username}}">Instagram</a></li>
-          <li><a target="_blank" href="https://medium.com/my-new-roots">Blog on Medium</a></li>
-          <li><a target="_top" href="mailto:{{site.email}}">{{site.email}}</a></li>
-          <li><a target="_top" href="mailto:{{site.secondary_email}}">{{site.secondary_email}}</a></li>
-        </ul>
-      </div>
-      <div class="col l8 s12">
-        <div class="col s12 footer-btn-row">
-          <div class="col m6 s12 footer-btn">
-            <a target="_blank" href="https://twitter.com/{{site.twitter_username}}" class="col s12 waves-effect waves-light btn-large black">
-              <i class="fa fa-twitter" aria-hidden="true"></i> Follow me on twitter
-            </a>
-          </div>
-          <div class="col m6 s12 footer-btn">
-            <a target="_blank" href="https://github.com/{{site.twitter_username}}" class="col s12 waves-effect waves-light btn-large black">
-              <i class="fa fa-github" aria-hidden="true"></i> Follow me on github
-            </a>
-          </div>
-        </div>
-        <div class="col s12 footer-btn-row">
-          <div class="col s12 offset-m3 footer-btn">
-            <a target="_blank" href="https://fb.com/{{site.facebook_username}}" class="col s12 m6 waves-effect waves-light btn-large black">
-              <i class="fa fa-facebook" aria-hidden="true"></i> Follow me on Facebook
-            </a>
-          </div>
-        </div>
+      <h5 class="center white-text title">Handmade by {{site.author}} © 2017.</h5>
+      <div class="center social-links">
+        <a target="_blank" href="https://www.linkedin.com/in/{{site.linkedin_username}}/"><i class="fa fa-linkedin"></i></a>
+        <a target="_blank" href="https://instagram.com/{{site.instagram_username}}"><i class="fa fa-instagram"></i></a>
+        <a target="_blank" href="https://medium.com/my-new-roots"><i class="fa fa-medium"></i></a>
+        <a target="_top" href="mailto:{{site.email}}"><i class="fa fa-envelope-o"></i></a>
+        <a target="_blank" href="https://twitter.com/{{site.twitter_username}}"><i class="fa fa-twitter"></i></a>
+        <a target="_blank" href="https://github.com/{{site.github_username}}"><i class="fa fa-github"></i></a>
+        <a target="_blank" href="https://fb.com/{{site.facebook_username}}"><i class="fa fa-facebook"></i></a>
       </div>
     </div>
   </div>
   <div class="footer-copyright blue-grey darken-4">
     <div class="container">
-      © 2017 nkprince007
-      <span class="right grey-text text-lighten-4">
-            Built using <a href="https://jquery.org/">jQuery</a>, <a href="http://materializecss.com/">materialize.css</a> and <a href="https://jekyllrb.com/">Jekyll</a>.
-        </span>
+      <p class="center-align grey-text text-lighten-4">
+        Built using <a href="https://jquery.org/">jQuery</a>, <a href="http://materializecss.com/">materialize.css</a> and
+        <a href="https://jekyllrb.com/">Jekyll</a>.
+      </p>
     </div>
   </div>
 </footer>
