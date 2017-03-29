@@ -120,7 +120,10 @@ $(document).ready(() => {
        * Properties:
        * - html_url: GitHub repo's URL.
        * - name: Name of the project.
-       * - languages_url: Languages used.
+       * - language: Most widely used language.
+       * - forks_count: No. of forks.
+       * - open_issues_count: No. of open issues.
+       * - stargazers_count: No. of stars
        *
        * Optional properties:
        * - description: Description of repository, if any.
@@ -144,34 +147,32 @@ $(document).ready(() => {
         target: "_blank"
       });
 
-      cardContent.append($("<p />", {
-        class: "card-description"
-      }).text(repo['description']));
+      cardContent
+        .append($("<p />", {
+          class: "card-title truncate"
+        }).text(repo['name']))
+        .append($("<p />", {
+          class: "card-description"
+        }).text(repo['description']));
 
-      cardContent.prepend($("<p />", {
-        class: "card-title truncate"
-      }).text(repo['name']));
+      cardAction
+        .append($("<span />", {
+          class: "chip"
+        }).text(repo["language"]))
+        .append($("<span />", {
+          class: "chip"
+        }).html('<i class="fa fa-code-fork"></i>&nbsp;' + repo["forks_count"]))
+        .append($("<span />", {
+          class: "chip"
+        }).html('<i class="fa fa-bug"></i>&nbsp;' + repo["open_issues_count"]))
+        .append($("<span />", {
+          class: "chip"
+        }).html('<i class="fa fa-star"></i>&nbsp;' + repo["stargazers_count"]));
 
-      link.append(cardContent);
-      link.append(cardAction);
+      link.append(cardContent).append(cardAction);
       card.append(link)
       col.append(card);
       container.append(col);
-
-      $.ajax({
-        url: repo["languages_url"],
-        async: true
-      }).then((languages) => {
-        $.each(languages, (k, v) => {
-          cardAction.append($("<span />", {
-            class: "chip"
-          }).text(k));
-        });
-      }).then(() => {
-        $(".github .project-container").masonry();
-      }).catch(() => {
-        cardAction.remove();
-      });
     });
   }).then(() => {
     $(".github .project-container").masonry();
@@ -211,6 +212,8 @@ $(document).ready(() => {
        * - web_url: GitLab repo's URL.
        * - name: Name of the repository.
        * - star_count: No. of stars.
+       * - forks_count: No. of forks.
+       * - open_issues_count: No. of open issues.
        *
        * Optional properties:
        * - description: Description of the repository, if any.
@@ -232,20 +235,26 @@ $(document).ready(() => {
         target: "_blank"
       });
 
-      cardContent.append($("<p />", {
-        class: "card-description"
-      }).text(repo["description"]));
+      cardContent
+        .append($("<p />", {
+          class: "card-title"
+        }).text(repo["name"]))
+        .append($("<p />", {
+          class: "card-description"
+        }).text(repo["description"]));
 
-      cardAction.append($("<span />", {
-        class: "chip"
-      }).html('<i class="fa fa-star"></i>&nbsp;' + repo["star_count"]));
+      cardAction
+        .append($("<span />", {
+          class: "chip"
+        }).html('<i class="fa fa-code-fork"></i>&nbsp;' + repo["forks_count"]))
+        .append($("<span />", {
+          class: "chip"
+        }).html('<i class="fa fa-bug"></i>&nbsp;' + repo["open_issues_count"]))
+        .append($("<span />", {
+          class: "chip"
+        }).html('<i class="fa fa-star"></i>&nbsp;' + repo["star_count"]));
 
-      cardContent.prepend($("<p />", {
-        class: "card-title"
-      }).text(repo["name"]));
-
-      link.append(cardContent);
-      link.append(cardAction);
+      link.append(cardContent).append(cardAction);
       card.append(link)
       col.append(card);
       container.append(col);
