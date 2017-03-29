@@ -342,37 +342,39 @@ $(document).ready(() => {
     draggable: true
   });
   $("#mobile-navbar li").on('click', event => {
+    var targetDiv = $(event.target).attr('href');
+    if ($(targetDiv).hasClass('active'))
+      return;
+
     $("#mobile-navbar li a").each((i, el) => {
       var linkedDiv = $(el).attr('href');
       $(linkedDiv).removeClass('active');
-      $(linkedDiv).fadeOut(500);
+      $(linkedDiv).fadeOut(0);
     });
 
-    var targetDiv = $(event.target).attr('href');
     $(targetDiv).addClass('active');
     $(targetDiv).fadeIn(500, () => {
-      $(".github .project-container").masonry();
-      $(".gitlab .project-container").masonry();
+      $(".project-container").masonry();
     });
-
-    $(".github .project-container").masonry();
-    $(".gitlab .project-container").masonry();
   });
 
   // Navbar large screen settings
   $("#main-nav li a").on('click', event => {
+    var targetDiv = $(event.currentTarget).attr('href');
+    if ($(targetDiv).hasClass('active'))
+      return;
+
     $("#main-nav li a:not(#main-nav li a.active)").each((i, el) => {
       var linkedDiv = $(el).attr('href');
       $(linkedDiv).fadeOut(1000);
     });
 
-    var targetDiv = $(event.currentTarget).attr('href');
     $("html, body").animate({
       scrollTop: 0
     });
+
     $(targetDiv).fadeIn(1000, () => {
-      $(".github .project-container").masonry();
-      $(".gitlab .project-container").masonry();
+      $(".project-container").masonry();
     });
   });
 });

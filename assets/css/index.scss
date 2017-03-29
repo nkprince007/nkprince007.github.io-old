@@ -215,7 +215,11 @@ html {
 
   .blog-title {
     background-color: #673ab7;
-    padding: 5% 5% 2% 5%;
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 2%;
+
     font-family: Raleway, sans-serif;
 
     .title {
@@ -314,11 +318,13 @@ html {
 }
 
 #projects {
-  margin-bottom: 0;
   background-color: $background-color;
 
   .section-banner {
-    padding: 5% 5% 2% 5%;
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 2%;
     font-family: Raleway, sans-serif;
 
     .title {
@@ -333,17 +339,17 @@ html {
   }
 
   .project-row {
-    padding: 2.5% 2% 2.5% 2%;
+    margin: 5% 0;
     text-align: center;
-    font-color: black!important;
+    color: black!important;
 
     .project-banner {
       font-weight: 400;
       font-family: Roboto Slab, sans-serif;
     }
 
-    .project {
-      margin: 3% 5%;
+    .project.card {
+      margin: 2% 0%;
 
       .card-title {
         font-size: 22px !important;
