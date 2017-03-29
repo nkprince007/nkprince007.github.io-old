@@ -362,9 +362,8 @@ $(document).ready(() => {
     });
 
     $(targetDiv).addClass('active');
-    $(targetDiv).fadeIn(500, () => {
-      $(".project-container").masonry();
-    });
+    $(targetDiv).fadeIn(500);
+    $(".project-container").masonry();
   });
 
   // Navbar large screen settings
@@ -382,8 +381,7 @@ $(document).ready(() => {
       scrollTop: 0
     });
 
-    $(targetDiv).fadeIn(1000, () => {
-      $(".project-container").masonry();
-    });
+    $(targetDiv).fadeIn(1000);
+    $(".project-container").masonry();
   });
 });
