@@ -1,8 +1,13 @@
 ---
 ---
+$grey-tinted-color: #757575;
 $background-color: #fafafa;
+$welcome-background-color: #fff;
+$skills-background-color: #eee;
+$contact-background-color: #fff;
+$slate-color: #2A3A3F;
 
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons|Raleway:200,400,700|Poppins|Roboto+Slab|Open+Sans:400,500,700|Space+Mono');
+@import url('https://fonts.googleapis.com/icon?family=Raleway:200,400,700|Poppins|Montserrat:300,400,700|Open+Sans:400,500,700|Space+Mono');
 @import 'animate.scss';
 
 @font-face {
@@ -13,6 +18,12 @@ $background-color: #fafafa;
 html {
   background-color: $background-color;
   overflow-x: hidden;
+}
+
+.page-footer {
+  .title {
+    font-family: Raleway, Helvetica, Arial, sans-serif;
+  }
 }
 
 .navbar {
@@ -45,34 +56,69 @@ html {
     }
   }
 }
+
 #home {
+  margin: 0;
 
   section {
-    padding: 3%;
+    padding: 5%;
     clear: both;
+
+    .container {
+      .title {
+        position: relative;
+        text-transform: lowercase;
+        font-family: Raleway, Arial, Helvetica, sans-serif;
+        font-weight: 800;
+        font-size: 3.2rem;
+        color: $slate-color;
+        display: block;
+        margin: 0;
+
+        &:after {
+          position: absolute;
+          bottom: 0;
+          left: 12.5%;
+          content: "";
+          height: 2px;
+          width: 75%;
+          opacity: 0.4;
+          background-color: $grey-tinted-color;
+        }
+      }
+
+      .sub-title {
+        font-size: 1.5rem;
+        color: $slate-color;
+        font-family: Raleway, Arial, Helvetica, sans-serif;
+      }
+    }
   }
 
-  .welcome {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  #welcome {
+    background-color: $welcome-background-color;
 
-    .owner-picture {
-      flex: 1.25;
-      margin-right: -60px;
-      display: inline-block;
-      vertical-align: top;
-      z-index: -1;
-      text-align: right;
-      position: relative;
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
 
-      .glitch-container {
-        margin: 0px;
+      .owner-picture {
+        flex: 1.25;
+        margin-right: -50px;
+        display: inline-block;
+        vertical-align: top;
+        text-align: right;
+        position: relative;
 
-        img {
-          width: 100%;
-          height: 100%;
+        .glitch-container {
+          margin: 0px;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
         }
       }
     }
@@ -82,9 +128,10 @@ html {
       display: inline-block;
 
       .owner-title {
+        font-family: Montserrat, sans-serif;
         text-align: left !important;
-        font-family: Roboto Slab, serif;
-        font-size: 4vw;
+        font-size: 72px;
+        font-weight: 700;
         animation: pulsed 5s infinite !important;
       }
 
@@ -94,7 +141,7 @@ html {
         text-align: right !important;
 
         .owner-subtitle {
-          font-family: Poppins, Helvetica, Arial, sans-serif;
+          font-family: Poppins, Arial, Helvetica, sans-serif;
           font-weight: 500;
           font-style: normal;
           font-size: 0.75rem;
@@ -132,80 +179,112 @@ html {
   }
 }
 
-#about {
-  position: relative;
+#skills {
+  background-color: $skills-background-color;
 
-  .title {
-    font-family: Roboto Slab, serif;
-    text-transform: uppercase;
-  }
-
-  .line-component {
-    position: relative;
-
-    &:nth-child(even) .card {
-      margin-left: calc(50% + 50px);
-    }
-
-    &:nth-child(odd) .card {
-      margin-left: 0;
-      text-align: right;
-    }
-
-    &:before, &:after {
-      display: block;
-      content: "";
-      width: 2px;
-      height: calc(50% - 30px);
-      position: absolute;
-      background: #d2d2d2;
-      left: calc(50% - 1px);
-      top: 0;
-    }
-
-    &:after {
-      height: calc(50% - 15px);
-      position: absolute;
-      top: calc(50% + 30px);
-    }
-
-    &:first-of-type::before,
-    &:last-child::after {
-        display: none !important;
-    }
-
-    .card {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 17px;
+  .container {
+    .line-component {
       position: relative;
-      width: calc(50% - 50px);
 
-      .card-title {
-        font-weight: 500;
-        font-family: Poppins, Helvetica, Arial, sans-serif;
+      &:nth-child(even) .card {
+        margin-left: calc(50% + 50px);
+      }
+
+      &:nth-child(odd) .card {
+        margin-left: 0;
+      }
+
+      &:before, &:after {
+        display: block;
+        content: "";
+        width: 2px;
+        height: calc(50% - 30px);
+        position: absolute;
+        background: #d2d2d2;
+        left: calc(50% - 1px);
+        top: 0;
+      }
+
+      &:after {
+        height: calc(50% - 15px);
+        position: absolute;
+        top: calc(50% + 30px);
+      }
+
+      &:first-of-type::before,
+      &:last-child::after {
+          display: none !important;
+      }
+
+      .card {
+        text-align: center;
+        font-family: Montserrat, sans-serif;
+        font-weight: 300;
+        position: relative;
+        width: calc(50% - 50px);
+        color: $grey-tinted-color;
+
+        .card-title {
+          font-size: 24px !important;
+          text-transform: lowercase;
+          color: $slate-color;
+          font-weight: 500;
+        }
+
+        .card-content {
+          padding: 10%;
+          font-size: 16px;
+          line-height: 1.8;
+        }
+      }
+
+      .badge {
+        display: block;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background: #d2d2d2;
+        top: calc(50% - 20px);
+        right: calc(50% - 20px);
+        border-radius: 50%;
+        text-align: center;
+        cursor: default;
+        animation: all 0.3s ease;
+
+        &:hover {
+          transition: scale3d(1.2, 1.2, 1);
+        }
+
+        i {
+          font-size: 25px;
+          line-height: 40px;
+        }
       }
     }
+  }
+}
 
-    .badge {
-      display: block;
+#contact-form {
+  background-color: $contact-background-color;
+
+  .container {
+    .row {
+      position: relative;
+    }
+
+    .form-preloader {
       position: absolute;
-      width: 40px;
-      height: 40px;
-      background: #d2d2d2;
-      top: calc(50% - 20px);
-      right: calc(50% - 20px);
-      border-radius: 50%;
-      text-align: center;
-      cursor: default;
-      animation: all 0.3s ease;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-color: $background-color;
+      z-index: 2;
+    }
 
-      &:hover {
-        transition: scale3d(1.2, 1.2, 1);
-      }
-
-      i {
-        font-size: 25px;
-        line-height: 40px;
+    .g-recaptcha {
+      div {
+        margin: 0 auto;
       }
     }
   }
@@ -289,35 +368,6 @@ html {
   }
 }
 
-#contact-form {
-  position: relative;
-
-  .title {
-    font-family: Roboto Slab, sans-serif;
-    text-transform: uppercase;
-  }
-
-  .row {
-    position: relative;
-  }
-
-  .form-preloader {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: $background-color;
-    z-index: 2;
-  }
-
-  .g-recaptcha {
-    div {
-      margin: 0 auto;
-    }
-  }
-}
-
 #projects {
   background-color: $background-color;
 
@@ -346,7 +396,7 @@ html {
 
     .project-banner {
       font-weight: 400;
-      font-family: Roboto Slab, sans-serif;
+      font-family: Montserrat, sans-serif;
     }
 
     .project.card {
@@ -395,7 +445,16 @@ html {
 
 @media only screen and (max-width: 767px) {
   #home {
-    .welcome {
+    .container {
+      width: 100%;
+
+      .title {
+        font-weight: 500;
+        font-size: 2rem !important;
+      }
+    }
+
+    #welcome .container {
       flex-direction: column;
 
       .owner-picture {
@@ -403,6 +462,9 @@ html {
       }
 
       .owner-content {
+        .owner-title {
+          font-size: 36px !important;
+        }
         .owner-details {
           margin-left: 0 !important;
 
@@ -419,17 +481,22 @@ html {
     }
   }
 
-  #about {
+  #skills .container {
+
     .line-component {
       &:before, &:after {
         left: 19px !important;
       }
 
       .card {
-        margin-left: 70px !important;
-        width: calc(100% - 75px);
-        font-size: 14px;
+        margin-left: 50px !important;
+        width: calc(100% - 60px) !important;
+        font-size: 12px !important;
         text-align: left!important;
+
+        .card-content {
+          padding: 5% !important;
+        }
       }
 
       .badge {
