@@ -14,6 +14,10 @@ String.prototype.replaceAt = function (index, character) {
   return charArray.toString();
 }
 
+String.prototype.matchReplace = function (matcher) {
+  return this.replace(this.match(matcher)[1], "");
+}
+
 String.prototype.trimRegex = function (regex) {
   return this.replace(regex, '');
 }

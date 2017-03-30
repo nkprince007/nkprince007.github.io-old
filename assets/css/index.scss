@@ -319,22 +319,46 @@ html {
       padding: 0;
 
       .collapsible-header {
-        padding-left: 20%;
-        padding-right: 20%;
+        display: flex;
+        padding-left: 15%;
+        padding-right: 15%;
         padding-top: 1%;
         padding-bottom: 1%;
-        font-size: 1.5rem;
-        font-weight: 500;
         font-family: 'Open Sans', sans-serif;
+
+        h5 {
+          display: inline-block;
+          font-size: 1.5rem;
+          font-weight: 500;
+        }
+
+        .tags {
+          flex: 1 0 auto;
+          margin: .82rem 0 .656rem 0;
+          white-space: nowrap;
+          height: fit-content;
+          overflow: hidden;
+          display: inline-block;
+
+          .chip {
+            margin-bottom: 0;
+          }
+        }
       }
 
       .collapsible-body {
-        padding-left: 20%;
-        padding-right: 20%;
+        padding-left: 15%;
+        padding-right: 15%;
         font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
         font-size: 21px;
         font-weight: normal;
         font-style: normal;
+
+        hr {
+          width: 75%;
+          opacity: .5;
+          margin: auto;
+        }
 
         a {
           text-decoration: underline;
@@ -362,6 +386,28 @@ html {
 
         strong, b {
           font-weight: bold !important;
+        }
+
+        .ender {
+          padding: 15px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-family: 'Open Sans', sans-serif;
+
+          a {
+            text-decoration: none;
+          }
+
+          i {
+            padding: 4px;
+            font-size: 12px;
+            opacity: .44;
+          }
+
+          .date {
+            opacity: .6;
+          }
         }
       }
     }

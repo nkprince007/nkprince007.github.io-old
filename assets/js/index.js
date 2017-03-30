@@ -315,10 +315,6 @@ $(document).ready(() => {
     const blogPosts = channel.item;
     blogPosts.forEach(post => {
       const postPubDate = post.pubDate;
-      const postTags = post.category;
-      const postLink = post.link;
-      const postInnerHTML = post.encoded.trimRegex(RegExp("<hr>.*$"));
-      const postTitle = post.title;
 
       var postList = $(".blog-list");
       var postListItemElement = $("<li />");
@@ -329,8 +325,40 @@ $(document).ready(() => {
         class: 'collapsible-body'
       });
 
-      postHeaderElement.html(postTitle);
-      postBodyElement.html(postInnerHTML);
+      postHeaderElement.append($("<h5 />", {
+        class: "truncate"
+      }).text(post.title));
+      var postTagsHeaderElement = $("<div />", {
+        class: "tags right hide-on-small-only"
+      });
+      if (Array.isArray(post.category)) {
+        post.category.forEach(tag => {
+          var chip = $("<span />", {
+            class: "chip truncate right"
+          }).text(tag);
+          postTagsHeaderElement.append(chip);
+        });
+      } else if (post.category) {
+        postTagsHeaderElement.append($("<span />", {
+          class: "chip truncate right"
+        }).text(post.category));
+      }
+
+      postHeaderElement.append(postTagsHeaderElement);
+      postBodyElement.html(post.encoded.trimRegex(/<hr>(.*)$/));
+      postBodyElement
+        .append($("<div />", {
+            class: "center ender"
+          })
+          .append($("<a />", {
+            href: post.link
+          }).text("View on Medium.com"))
+          .append($("<i />", {
+            class: "fa fa-circle"
+          }))
+          .append($("<span />", {
+            class: "date"
+          }).text(new Date(post.pubDate).toDateString())));
 
       postListItemElement.append(postHeaderElement);
       postListItemElement.append(postBodyElement);
