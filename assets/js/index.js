@@ -158,14 +158,20 @@ $(document).ready(() => {
       cardAction
         .append($("<span />", {
           class: "chip"
-        }).text(repo["language"]))
-        .append($("<span />", {
+        }).text(repo["language"]));
+
+      if (repo["forks_count"])
+        cardAction.append($("<span />", {
           class: "chip"
         }).html('<i class="fa fa-code-fork"></i>&nbsp;' + repo["forks_count"]))
-        .append($("<span />", {
+
+      if (repo["open_issues_count"])
+        cardAction.append($("<span />", {
           class: "chip"
         }).html('<i class="fa fa-bug"></i>&nbsp;' + repo["open_issues_count"]))
-        .append($("<span />", {
+
+      if (repo["stargazers_count"])
+        cardAction.append($("<span />", {
           class: "chip"
         }).html('<i class="fa fa-star"></i>&nbsp;' + repo["stargazers_count"]));
 
@@ -243,14 +249,18 @@ $(document).ready(() => {
           class: "card-description"
         }).text(repo["description"]));
 
-      cardAction
-        .append($("<span />", {
+      if (repo["forks_count"])
+        cardAction.append($("<span />", {
           class: "chip"
         }).html('<i class="fa fa-code-fork"></i>&nbsp;' + repo["forks_count"]))
-        .append($("<span />", {
+
+      if (repo["open_issues_count"])
+        cardAction.append($("<span />", {
           class: "chip"
         }).html('<i class="fa fa-bug"></i>&nbsp;' + repo["open_issues_count"]))
-        .append($("<span />", {
+
+      if (repo["star_count"])
+        cardAction.append($("<span />", {
           class: "chip"
         }).html('<i class="fa fa-star"></i>&nbsp;' + repo["star_count"]));
 
