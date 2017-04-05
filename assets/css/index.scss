@@ -354,6 +354,24 @@ html {
         font-weight: normal;
         font-style: normal;
 
+        iframe {
+          width: 100%;
+        }
+
+        ul, ol {
+          width: 80%;
+          margin: auto;
+
+          li {
+            list-style-type: disc;
+          }
+        }
+
+        video, audio {
+          width: 100%;
+          padding: 10px;
+        }
+
         hr {
           width: 75%;
           opacity: .5;
@@ -563,7 +581,10 @@ html {
         .collapsible-header {
           padding-left: 5% !important;
           padding-right: 5% !important;
-          font-size: 1.2rem;
+
+          h5 {
+            font-size: 1.2rem !important;
+          }
         }
 
         .collapsible-body {
@@ -573,6 +594,15 @@ html {
 
           p, h1, h2, h3, h4, h5, h6 {
             margin-top: 18px;
+          }
+
+          ul, ol {
+            width: 100%;
+            padding: 5px;
+
+            li {
+              list-style-type: circle;
+            }
           }
 
           pre, code {
