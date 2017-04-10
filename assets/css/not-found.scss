@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import 'animate.scss';
 
-html, body, #static {
+html, body{
   padding: 0;
   margin: 0;
   width: 100%;
@@ -11,42 +11,58 @@ html, body, #static {
   overflow-x: hidden;
 }
 
-#static {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  -webkit-perspective: 1000;
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafafa;
+
+  .container {
+    padding: 3% 5%;
+  }
+}
+
+.monster {
+  text-align: center;
+  margin-left: -12%;
+  opacity: 0.85;
+
+  img {
+    width: 80%;
+  }
 }
 
 .error {
-  color: white;
+  z-index: 2;
   font-family: "Open Sans","Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
 
   .message {
     display: block;
-    animation: pulsed 5s infinite;
     font-weight: bold;
-    font-size: 12vw;
+    font-size: 5vw;
+    margin: 0;
   }
 
   .text {
-    text-transform: uppercase;
     font-size: 3vw;
     margin: 0;
   }
 
   .base-link {
+    color: limegreen;
     padding: 5% 0%;
+    font-size: 2.5vw;
     display: block;
-    text-transform: uppercase;
   }
 
   .base-link:hover i {
     animation: arrow .4s infinite;
+  }
+}
+
+@media only screen and (max-width:760px) {
+  .monster {
+    margin-left: -30%;
   }
 }
