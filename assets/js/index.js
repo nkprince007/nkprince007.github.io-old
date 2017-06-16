@@ -264,8 +264,10 @@ $(document).ready(() => {
           class: "chip"
         }).html('<i class="fa fa-star"></i>&nbsp;' + repo["star_count"]));
 
-      link.append(cardContent).append(cardAction);
-      card.append(link)
+      link.append(cardContent);
+      if (cardAction.children().length > 0)
+        link.append(cardAction);
+      card.append(link);
       col.append(card);
       container.append(col);
     });
