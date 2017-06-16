@@ -470,6 +470,9 @@ html {
         font-size: 22px !important;
         font-weight: 300;
         font-family: Poppins, Helvetica, Arial, sans-serif;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
 
       .card-content {
