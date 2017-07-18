@@ -33,7 +33,7 @@ linkedin_username: nkprince007
 # Build settings
 markdown: kramdown
 gems:
-  - jekyll-feed
+  - jekyll-redirect-from
 exclude:
   - Gemfile
   - Gemfile.lock
