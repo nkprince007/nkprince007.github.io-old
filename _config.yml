@@ -38,6 +38,7 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - vendor
 port: 8000
 sass:
   style: compressed

@@ -79,13 +79,6 @@ $(document).ready(() => {
     setInterval(() => chaffle.init(), 5000);
   });
 
-  var elements = document.querySelectorAll('[data-juggle]');
-  elements.forEach(el => {
-    const juggle = new Juggle(el);
-    $(el).mouseover(() => juggle.init());
-    $(el).mouseout(() => juggle.stop());
-  });
-
   /*
    * Opensource repo parser
    *
@@ -391,37 +384,13 @@ $(document).ready(() => {
     draggable: true
   });
   $("#mobile-navbar li").on('click', event => {
-    var targetDiv = $(event.target).attr('href');
-    if ($(targetDiv).hasClass('active'))
-      return;
-
-    $("#mobile-navbar li a").each((i, el) => {
-      var linkedDiv = $(el).attr('href');
-      $(linkedDiv).removeClass('active');
-      $(linkedDiv).fadeOut(0);
-    });
-
-    $(targetDiv).addClass('active');
-    $(targetDiv).fadeIn(500);
-    $(".project-container").masonry();
+    $("html, body").animate({ scrollTop: 0 }, 5);
+    setTimeout(() => $(".project-container").masonry(), 5);
   });
 
   // Navbar large screen settings
   $("#main-nav li a").on('click', event => {
-    var targetDiv = $(event.currentTarget).attr('href');
-    if ($(targetDiv).hasClass('active'))
-      return;
-
-    $("#main-nav li a:not(#main-nav li a.active)").each((i, el) => {
-      var linkedDiv = $(el).attr('href');
-      $(linkedDiv).fadeOut(1000);
-    });
-
-    $("html, body").animate({
-      scrollTop: 0
-    });
-
-    $(targetDiv).fadeIn(1000);
-    $(".project-container").masonry();
+    $("html, body").animate({ scrollTop: 0 }, 5);
+    setTimeout(() => $(".project-container").masonry(), 5);
   });
 });
