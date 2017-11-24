@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/nkprince007
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://nkprince007.github.io
+  * I am nkprince007 (https://keybase.io/nkprince007) on keybase.
+  * I have a public key ASCI64OvlPaJIsNCscddaRE-Vsp-dbAMaXYckMjeK-voWQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101a8c592f84d3b0c2ed66db3f462c0ba7661e5723e2032a07aab2b357d34e1eb480a",
+      "host": "keybase.io",
+      "kid": "012088eb83af94f68922c342b1c75d69113e56ca7e75b00c69761c90c8de2bebe8590a",
+      "uid": "0996c02f9837390cb6a21acdbf786519",
+      "username": "nkprince007"
+    },
+    "merkle_root": {
+      "ctime": 1511523549,
+      "hash": "1c18120a8059f613cddcafbb704dab872945b899952b60f65a25dcd832c4bd5287e7c96625bcf3956f33563f3d99e2641e6645dbead53279cc14edde190ca027",
+      "hash_meta": "e2b2329b8e708309ac836a48f1b6679246c84696f31b2c32f0b3bce275784cb4",
+      "seqno": 1742082
+    },
+    "service": {
+      "hostname": "nkprince007.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.36"
+  },
+  "ctime": 1511523581,
+  "expire_in": 504576000,
+  "prev": "26ebba0a55bc2235fef1e9fa5116f60f2605cce73bc748d6332de03b1fa4365d",
+  "seqno": 9,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgiOuDr5T2iSLDQrHHXWkRPlbKfnWwDGl2HJDI3ivr6FkKp3BheWxvYWTFA1B7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxYThjNTkyZjg0ZDNiMGMyZWQ2NmRiM2Y0NjJjMGJhNzY2MWU1NzIzZTIwMzJhMDdhYWIyYjM1N2QzNGUxZWI0ODBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwODhlYjgzYWY5NGY2ODkyMmMzNDJiMWM3NWQ2OTExM2U1NmNhN2U3NWIwMGM2OTc2MWM5MGM4ZGUyYmViZTg1OTBhIiwidWlkIjoiMDk5NmMwMmY5ODM3MzkwY2I2YTIxYWNkYmY3ODY1MTkiLCJ1c2VybmFtZSI6Im5rcHJpbmNlMDA3In0sIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNTExNTIzNTQ5LCJoYXNoIjoiMWMxODEyMGE4MDU5ZjYxM2NkZGNhZmJiNzA0ZGFiODcyOTQ1Yjg5OTk1MmI2MGY2NWEyNWRjZDgzMmM0YmQ1Mjg3ZTdjOTY2MjViY2YzOTU2ZjMzNTYzZjNkOTllMjY0MWU2NjQ1ZGJlYWQ1MzI3OWNjMTRlZGRlMTkwY2EwMjciLCJoYXNoX21ldGEiOiJlMmIyMzI5YjhlNzA4MzA5YWM4MzZhNDhmMWI2Njc5MjQ2Yzg0Njk2ZjMxYjJjMzJmMGIzYmNlMjc1Nzg0Y2I0Iiwic2Vxbm8iOjE3NDIwODJ9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoibmtwcmluY2UwMDcuZ2l0aHViLmlvIiwicHJvdG9jb2wiOiJodHRwczoifSwidHlwZSI6IndlYl9zZXJ2aWNlX2JpbmRpbmciLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIxLjAuMzYifSwiY3RpbWUiOjE1MTE1MjM1ODEsImV4cGlyZV9pbiI6NTA0NTc2MDAwLCJwcmV2IjoiMjZlYmJhMGE1NWJjMjIzNWZlZjFlOWZhNTExNmY2MGYyNjA1Y2NlNzNiYzc0OGQ2MzMyZGUwM2IxZmE0MzY1ZCIsInNlcW5vIjo5LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQJWtBNuMi6QL/dEqnF57qKSqGbhC2nTiDHiiy/tFuSDzpoIsChhl/AUgLB7L56kKYTi/D/7c6L7dxLXDr1r4OQqoc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCApX+CwikZdQzilR5r1/wgGrsWmxIVOyrK+WMfC8aaRgaN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/nkprince007
+
+==================================================================
